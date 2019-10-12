@@ -9,6 +9,13 @@
 import UIKit
 
 class SearchWorker {
-  func doSomeWork() {
-  }
+
+    private let urlSession: URLSession
+
+    init(urlSession: URLSession = URLSession.shared) {
+        self.urlSession = urlSession
+    }
+
+    func doSearch(callback: @escaping (Result<ArtistsResponse, Error>) -> Void) {
+    }
 }

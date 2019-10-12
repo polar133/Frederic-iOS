@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SearchDisplayLogic: class {
-  func displaySomething(viewModel: Search.Something.ViewModel)
+  func displaySomething(viewModel: Search.Artists.ViewModel)
 }
 
 class SearchViewController: UIViewController, SearchDisplayLogic {
@@ -66,11 +66,11 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
   //@IBOutlet weak var nameTextField: UITextField!
 
   func doSomething() {
-    let request = Search.Something.Request()
+    let request = Search.Artists.Request()
     interactor?.doSomething(request: request)
   }
 
-  func displaySomething(viewModel: Search.Something.ViewModel) {
+  func displaySomething(viewModel: Search.Artists.ViewModel) {
     //nameTextField.text = viewModel.name
   }
 }

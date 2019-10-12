@@ -37,7 +37,7 @@ class SearchInteractorTests: XCTestCase {
   class SearchPresentationLogicSpy: SearchPresentationLogic {
     var presentSomethingCalled = false
 
-    func presentSomething(response: Search.Something.Response) {
+    func presentSomething(response: Search.Artists.Response) {
       presentSomethingCalled = true
     }
   }
@@ -48,7 +48,7 @@ class SearchInteractorTests: XCTestCase {
     // Given
     let spy = SearchPresentationLogicSpy()
     sut.presenter = spy
-    let request = Search.Something.Request()
+    let request = Search.Artists.Request()
 
     // When
     sut.doSomething(request: request)

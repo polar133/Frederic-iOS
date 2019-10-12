@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SearchPresentationLogic {
-  func presentSomething(response: Search.Something.Response)
+  func presentSomething(response: Search.Artists.Response)
 }
 
 class SearchPresenter: SearchPresentationLogic {
@@ -17,8 +17,8 @@ class SearchPresenter: SearchPresentationLogic {
 
   // MARK: Do something
 
-  func presentSomething(response: Search.Something.Response) {
-    let viewModel = Search.Something.ViewModel()
+  func presentSomething(response: Search.Artists.Response) {
+    let viewModel = Search.Artists.ViewModel()
     viewController?.displaySomething(viewModel: viewModel)
   }
 }

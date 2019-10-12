@@ -1,0 +1,1702 @@
+{
+    "artists": {
+        "persons": [
+            {
+                "id": 11539849,
+                "forename": "Frederic",
+                "surname": "Chiu",
+                "name": "Frederic Chiu",
+                "functions": [
+                    "soloist"
+                ],
+                "popularity": 0.0266831574,
+                "score": 48.972992,
+                "kind": "person",
+                "matchedQueries": []
+            },
+            {
+                "id": 4309,
+                "forename": "Fritz",
+                "surname": "Reiner",
+                "name": "Fritz Reiner",
+                "functions": [
+                    "conductor"
+                ],
+                "popularity": 0.0300683096,
+                "score": 46.5919,
+                "kind": "person",
+                "matchedQueries": []
+            },
+            {
+                "id": 61214,
+                "forename": "George Frideric",
+                "surname": "Handel",
+                "name": "George Frideric Handel",
+                "functions": [
+                    "composer",
+                    "soloist"
+                ],
+                "popularity": 0.1691634765,
+                "score": 44.0493,
+                "kind": "person",
+                "matchedQueries": []
+            },
+            {
+                "id": 11288116,
+                "forename": "Frederica von",
+                "surname": "Stade",
+                "name": "Frederica von Stade",
+                "functions": [
+                    "soloist"
+                ],
+                "popularity": 0.0118653275,
+                "score": 38.229057,
+                "kind": "person",
+                "matchedQueries": []
+            }
+        ],
+        "ensembles": []
+    },
+    "music": {
+        "recordings": [
+            {
+                "id": 25552765,
+                "work": {
+                    "id": 11155152,
+                    "title": {
+                        "title": "Schwanengesang S 560 (after F. Schubert D 957)",
+                        "popularTitle": "",
+                        "subtitle": "",
+                        "structuralSubtitle": ""
+                    },
+                    "defaultRecordingId": 11683875,
+                    "composers": [
+                        {
+                            "id": 61325,
+                            "forename": "Franz",
+                            "surname": "Liszt",
+                            "name": "Franz Liszt",
+                            "functions": [
+                                "composer"
+                            ],
+                            "popularity": 0,
+                            "score": 0,
+                            "kind": "",
+                            "matchedQueries": []
+                        }
+                    ],
+                    "authors": [
+                        {
+                            "key": "composer",
+                            "authorType": "Composer",
+                            "persons": [
+                                {
+                                    "id": 61325,
+                                    "forename": "Franz",
+                                    "surname": "Liszt",
+                                    "name": "Franz Liszt"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "composer_original_work",
+                            "authorType": "Composer original work",
+                            "persons": [
+                                {
+                                    "id": 86371,
+                                    "forename": "Franz",
+                                    "surname": "Schubert",
+                                    "name": "Franz Schubert"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "interpreterSummary": "Frederic Chiu",
+                "recordingDate": {
+                    "from": "",
+                    "fromKeyword": "",
+                    "to": "",
+                    "toKeyword": ""
+                },
+                "popularity": 0,
+                "score": 216.23338,
+                "kind": "recording",
+                "matchedQueries": []
+            },
+            {
+                "id": 29896935,
+                "work": {
+                    "id": 575940,
+                    "title": {
+                        "title": "Die Zauberflöte (The Magic Flute) KV 620",
+                        "popularTitle": "",
+                        "subtitle": "",
+                        "structuralSubtitle": "Opera in two acts"
+                    },
+                    "defaultRecordingId": 29896935,
+                    "composers": [
+                        {
+                            "id": 61251,
+                            "forename": "Wolfgang Amadeus",
+                            "surname": "Mozart",
+                            "name": "Wolfgang Amadeus Mozart",
+                            "functions": [
+                                "composer"
+                            ],
+                            "popularity": 0,
+                            "score": 0,
+                            "kind": "",
+                            "matchedQueries": []
+                        }
+                    ],
+                    "authors": [
+                        {
+                            "key": "composer",
+                            "authorType": "Composer",
+                            "persons": [
+                                {
+                                    "id": 61251,
+                                    "forename": "Wolfgang Amadeus",
+                                    "surname": "Mozart",
+                                    "name": "Wolfgang Amadeus Mozart"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "libretto",
+                            "authorType": "Libretto",
+                            "persons": [
+                                {
+                                    "id": 5456620,
+                                    "forename": "Emanuel",
+                                    "surname": "Schikaneder",
+                                    "name": "Emanuel Schikaneder"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "interpreterSummary": "Claudio Abbado, Christoph Strehl, Caroline Stein, Heidi Zehnder, Anne-Carolyn Schlüter, Hanno Müller-Brachmann, Mahler Chamber Orchestra, Arnold Schoenberg Chor",
+                "recordingDate": {
+                    "from": "",
+                    "fromKeyword": "",
+                    "to": "",
+                    "toKeyword": ""
+                },
+                "popularity": 0,
+                "score": 169.83694,
+                "kind": "recording",
+                "matchedQueries": []
+            },
+            {
+                "id": 22565753,
+                "work": {
+                    "id": 15654111,
+                    "title": {
+                        "title": "Les Troyens H 133",
+                        "popularTitle": "",
+                        "subtitle": "",
+                        "structuralSubtitle": "Grand Opera in Five Acts"
+                    },
+                    "defaultRecordingId": 20264946,
+                    "composers": [
+                        {
+                            "id": 61305,
+                            "forename": "Hector",
+                            "surname": "Berlioz",
+                            "name": "Hector Berlioz",
+                            "functions": [
+                                "composer"
+                            ],
+                            "popularity": 0,
+                            "score": 0,
+                            "kind": "",
+                            "matchedQueries": []
+                        }
+                    ],
+                    "authors": [
+                        {
+                            "key": "composer",
+                            "authorType": "Composer",
+                            "persons": [
+                                {
+                                    "id": 61305,
+                                    "forename": "Hector",
+                                    "surname": "Berlioz",
+                                    "name": "Hector Berlioz"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "libretto",
+                            "authorType": "Libretto",
+                            "persons": [
+                                {
+                                    "id": 61305,
+                                    "forename": "Hector",
+                                    "surname": "Berlioz",
+                                    "name": "Hector Berlioz"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "interpreterSummary": "John Nelson, Joyce DiDonato, Michael Spyres, Marie-Nicole Lemieux, Stéphane Degout, Marianne Crebassa, Orchestre Philharmonique de Strasbourg, Badischer Staatsopernchor, Choeur Philharmonique de Strasbourg, Choeur de l'Opéra national du Rhin",
+                "recordingDate": {
+                    "from": "",
+                    "fromKeyword": "",
+                    "to": "",
+                    "toKeyword": ""
+                },
+                "popularity": 0,
+                "score": 169.36974,
+                "kind": "recording",
+                "matchedQueries": []
+            },
+            {
+                "id": 29269544,
+                "work": {
+                    "id": 29269528,
+                    "title": {
+                        "title": "Canon (arr. for two recorders and basso continuo)",
+                        "popularTitle": "",
+                        "subtitle": "",
+                        "structuralSubtitle": ""
+                    },
+                    "defaultRecordingId": 29269544,
+                    "composers": [
+                        {
+                            "id": 63147,
+                            "forename": "Johann",
+                            "surname": "Pachelbel",
+                            "name": "Johann Pachelbel",
+                            "functions": [
+                                "composer"
+                            ],
+                            "popularity": 0,
+                            "score": 0,
+                            "kind": "",
+                            "matchedQueries": []
+                        }
+                    ],
+                    "authors": [
+                        {
+                            "key": "composer",
+                            "authorType": "Composer",
+                            "persons": [
+                                {
+                                    "id": 63147,
+                                    "forename": "Johann",
+                                    "surname": "Pachelbel",
+                                    "name": "Johann Pachelbel"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "interpreterSummary": "Patrick Denecker, Frédéric de Roos, Ricercar Consort",
+                "recordingDate": {
+                    "from": "",
+                    "fromKeyword": "",
+                    "to": "",
+                    "toKeyword": ""
+                },
+                "popularity": 0,
+                "score": 162.77924,
+                "kind": "recording",
+                "matchedQueries": []
+            },
+            {
+                "id": 25873500,
+                "work": {
+                    "id": 11588149,
+                    "title": {
+                        "title": "Romeo and Juliet, Pieces for Piano op. 75 (1937)",
+                        "popularTitle": "",
+                        "subtitle": "",
+                        "structuralSubtitle": "Arr. of extracts from op. 64"
+                    },
+                    "defaultRecordingId": 12981589,
+                    "composers": [
+                        {
+                            "id": 86958,
+                            "forename": "Sergei",
+                            "surname": "Prokofiev",
+                            "name": "Sergei Prokofiev",
+                            "functions": [
+                                "composer"
+                            ],
+                            "popularity": 0,
+                            "score": 0,
+                            "kind": "",
+                            "matchedQueries": []
+                        }
+                    ],
+                    "authors": [
+                        {
+                            "key": "composer",
+                            "authorType": "Composer",
+                            "persons": [
+                                {
+                                    "id": 86958,
+                                    "forename": "Sergei",
+                                    "surname": "Prokofiev",
+                                    "name": "Sergei Prokofiev"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "interpreterSummary": "Frederic Chiu",
+                "recordingDate": {
+                    "from": "",
+                    "fromKeyword": "",
+                    "to": "",
+                    "toKeyword": ""
+                },
+                "popularity": 0,
+                "score": 162.45131,
+                "kind": "recording",
+                "matchedQueries": []
+            },
+            {
+                "id": 31010897,
+                "work": {
+                    "id": 14654666,
+                    "title": {
+                        "title": "Werther",
+                        "popularTitle": "",
+                        "subtitle": "",
+                        "structuralSubtitle": "Drame lyrique in four acts"
+                    },
+                    "defaultRecordingId": 14654974,
+                    "composers": [
+                        {
+                            "id": 86480,
+                            "forename": "Jules",
+                            "surname": "Massenet",
+                            "name": "Jules Massenet",
+                            "functions": [
+                                "composer"
+                            ],
+                            "popularity": 0,
+                            "score": 0,
+                            "kind": "",
+                            "matchedQueries": []
+                        }
+                    ],
+                    "authors": [
+                        {
+                            "key": "composer",
+                            "authorType": "Composer",
+                            "persons": [
+                                {
+                                    "id": 86480,
+                                    "forename": "Jules",
+                                    "surname": "Massenet",
+                                    "name": "Jules Massenet"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "libretto",
+                            "authorType": "Libretto",
+                            "persons": [
+                                {
+                                    "id": 5513888,
+                                    "forename": "Édouard",
+                                    "surname": "Blau",
+                                    "name": "Édouard Blau"
+                                },
+                                {
+                                    "id": 5513894,
+                                    "forename": "Paul",
+                                    "surname": "Milliet",
+                                    "name": "Paul Milliet"
+                                },
+                                {
+                                    "id": 5513899,
+                                    "forename": "Georges",
+                                    "surname": "Hartmann",
+                                    "name": "Georges Hartmann"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "interpreterSummary": "Sir Colin Davis, Robert Lloyd, Malcolm King, Paul Crook, Isobel Buchanan, José Carreras, Orchestra of the Royal Opera House Covent Garden, Children's Chorus Of The Royal Opera House, Covent Garden",
+                "recordingDate": {
+                    "from": "",
+                    "fromKeyword": "",
+                    "to": "",
+                    "toKeyword": ""
+                },
+                "popularity": 0,
+                "score": 161.97752,
+                "kind": "recording",
+                "matchedQueries": []
+            },
+            {
+                "id": 31320775,
+                "work": {
+                    "id": 12381397,
+                    "title": {
+                        "title": "The Fairy Queen Z 629",
+                        "popularTitle": "",
+                        "subtitle": "",
+                        "structuralSubtitle": ""
+                    },
+                    "defaultRecordingId": 32999408,
+                    "composers": [
+                        {
+                            "id": 86356,
+                            "forename": "Henry",
+                            "surname": "Purcell",
+                            "name": "Henry Purcell",
+                            "functions": [
+                                "composer"
+                            ],
+                            "popularity": 0,
+                            "score": 0,
+                            "kind": "",
+                            "matchedQueries": []
+                        }
+                    ],
+                    "authors": [
+                        {
+                            "key": "composer",
+                            "authorType": "Composer",
+                            "persons": [
+                                {
+                                    "id": 86356,
+                                    "forename": "Henry",
+                                    "surname": "Purcell",
+                                    "name": "Henry Purcell"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "text",
+                            "authorType": "Text",
+                            "persons": [
+                                {
+                                    "id": 6945861,
+                                    "forename": "William",
+                                    "surname": "Shakespeare",
+                                    "name": "William Shakespeare"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "interpreterSummary": "Sébastien d’Herin, Caroline Mutel, Guillaume Andrieux, Kevin Greenlaw, Virginie Pochon, Caitlin Hulcup, Les Nouveaux Caractères",
+                "recordingDate": {
+                    "from": "",
+                    "fromKeyword": "",
+                    "to": "",
+                    "toKeyword": ""
+                },
+                "popularity": 0,
+                "score": 160.66687,
+                "kind": "recording",
+                "matchedQueries": []
+            },
+            {
+                "id": 23842679,
+                "work": {
+                    "id": 11283507,
+                    "title": {
+                        "title": "Hänsel und Gretel: 'Abends will ich schlafen gehn'  (Hänsel, Gretel, Act II) (Evening Prayer)",
+                        "popularTitle": "",
+                        "subtitle": "",
+                        "structuralSubtitle": ""
+                    },
+                    "defaultRecordingId": 23842679,
+                    "composers": [
+                        {
+                            "id": 61393,
+                            "forename": "Engelbert",
+                            "surname": "Humperdinck",
+                            "name": "Engelbert Humperdinck",
+                            "functions": [
+                                "composer"
+                            ],
+                            "popularity": 0,
+                            "score": 0,
+                            "kind": "",
+                            "matchedQueries": []
+                        }
+                    ],
+                    "authors": [
+                        {
+                            "key": "libretto",
+                            "authorType": "Libretto",
+                            "persons": [
+                                {
+                                    "id": 5456409,
+                                    "forename": "Adelheid",
+                                    "surname": "Wette",
+                                    "name": "Adelheid Wette"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "composer",
+                            "authorType": "Composer",
+                            "persons": [
+                                {
+                                    "id": 61393,
+                                    "forename": "Engelbert",
+                                    "surname": "Humperdinck",
+                                    "name": "Engelbert Humperdinck"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "interpreterSummary": "André Previn, Kathleen Battle, Frederica von Stade, Orchestra of St. Luke's",
+                "recordingDate": {
+                    "from": "",
+                    "fromKeyword": "",
+                    "to": "",
+                    "toKeyword": ""
+                },
+                "popularity": 0,
+                "score": 160.49057,
+                "kind": "recording",
+                "matchedQueries": []
+            }
+        ],
+        "pieces": [],
+        "works": [
+            {
+                "id": 26946347,
+                "title": {
+                    "title": "Hommage à Frédéric Chopin",
+                    "popularTitle": "",
+                    "subtitle": "",
+                    "structuralSubtitle": ""
+                },
+                "defaultRecordingId": 26946363,
+                "composers": [
+                    {
+                        "id": 1166901,
+                        "forename": "Jean",
+                        "surname": "Françaix",
+                        "name": "Jean Françaix",
+                        "functions": [
+                            "composer"
+                        ],
+                        "popularity": 0,
+                        "score": 1601,
+                        "kind": "person",
+                        "matchedQueries": []
+                    }
+                ],
+                "authors": [
+                    {
+                        "key": "composer",
+                        "authorType": "Composer",
+                        "persons": [
+                            {
+                                "id": 1166901,
+                                "forename": "Jean",
+                                "surname": "Françaix",
+                                "name": "Jean Françaix"
+                            }
+                        ]
+                    }
+                ],
+                "popularity": 0.0000190904,
+                "score": 1600,
+                "kind": "work",
+                "matchedQueries": []
+            }
+        ]
+    },
+    "albums": [
+        {
+            "id": "fdf1a4cd-225a-4901-b881-6ff8914bc570",
+            "slug": "frederick-ii-sinfonias-flute-concertos",
+            "title": "Frederick Ii: Sinfonias / Flute Concertos",
+            "upc": "4006408100645",
+            "kind": "album",
+            "score": 10,
+            "imageUrl": "https://idagio-images.global.ssl.fastly.net/albums/4006408100645/main.jpg",
+            "participants": [
+                {
+                    "id": 13993323,
+                    "type": "soloist",
+                    "name": "Manfred Friedrich",
+                    "numOccurrences": 6,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Manfred",
+                        "surname": "Friedrich",
+                        "instrument": "Flute",
+                        "instrumentID": 645
+                    }
+                },
+                {
+                    "id": 11238744,
+                    "type": "conductor",
+                    "name": "Hartmut Haenchen",
+                    "numOccurrences": 12,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Hartmut",
+                        "surname": "Haenchen",
+                        "instrument": null,
+                        "instrumentID": null
+                    }
+                },
+                {
+                    "id": 11239047,
+                    "type": "ensemble",
+                    "name": "Kammerorchester Carl Philipp Emanuel Bach",
+                    "numOccurrences": 12,
+                    "ensemble": {
+                        "function": "orchestra"
+                    },
+                    "person": null
+                },
+                {
+                    "id": 62751,
+                    "type": "composer",
+                    "name": "Friedrich der Große (Friedrich II.)",
+                    "numOccurrences": 12,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "",
+                        "surname": "Friedrich der Große (Friedrich II.)",
+                        "instrument": null,
+                        "instrumentID": null
+                    }
+                }
+            ],
+            "matchedQueries": [
+                "titleAutocomplete"
+            ]
+        },
+        {
+            "id": "fbefc8c3-6b0e-4b9c-b520-4c26ba6e4db8",
+            "slug": "frederickson-small-works",
+            "title": "Frederickson: Small Works",
+            "upc": "798304440997",
+            "kind": "album",
+            "score": 10,
+            "imageUrl": "https://idagio-images.global.ssl.fastly.net/albums/798304440997/main.jpg",
+            "participants": [
+                {
+                    "id": 26000535,
+                    "type": "ensemble",
+                    "name": "Longleash",
+                    "numOccurrences": 1,
+                    "ensemble": {
+                        "function": "piano-trio"
+                    },
+                    "person": null
+                },
+                {
+                    "id": 28797427,
+                    "type": "soloist",
+                    "name": "Matt Evans",
+                    "numOccurrences": 1,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Matt",
+                        "surname": "Evans",
+                        "instrument": "Percussion",
+                        "instrumentID": 3313
+                    }
+                },
+                {
+                    "id": 28797412,
+                    "type": "ensemble",
+                    "name": "Exceptet",
+                    "numOccurrences": 1,
+                    "ensemble": {
+                        "function": "instrumental-ensemble"
+                    },
+                    "person": null
+                },
+                {
+                    "id": 12604261,
+                    "type": "soloist",
+                    "name": "Ashley Bathgate",
+                    "numOccurrences": 5,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Ashley",
+                        "surname": "Bathgate",
+                        "instrument": "Violoncello",
+                        "instrumentID": 3277
+                    }
+                },
+                {
+                    "id": 15925836,
+                    "type": "soloist",
+                    "name": "Karl Larson",
+                    "numOccurrences": 5,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Karl",
+                        "surname": "Larson",
+                        "instrument": "Piano",
+                        "instrumentID": 3256
+                    }
+                },
+                {
+                    "id": 28797419,
+                    "type": "soloist",
+                    "name": "Eliza Bagg",
+                    "numOccurrences": 5,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Eliza",
+                        "surname": "Bagg",
+                        "instrument": "Soprano",
+                        "instrumentID": 3232
+                    }
+                },
+                {
+                    "id": 28797423,
+                    "type": "soloist",
+                    "name": "Brendon Randall-Myers",
+                    "numOccurrences": 6,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Brendon",
+                        "surname": "Randall-Myers",
+                        "instrument": "Electric Guitar",
+                        "instrumentID": 11465325
+                    }
+                },
+                {
+                    "id": 28797211,
+                    "type": "composer",
+                    "name": "Brooks Frederickson",
+                    "numOccurrences": 8,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Brooks",
+                        "surname": "Frederickson",
+                        "instrument": null,
+                        "instrumentID": null
+                    }
+                }
+            ],
+            "matchedQueries": [
+                "titleAutocomplete",
+                "participants.nameAutocomplete"
+            ]
+        },
+        {
+            "id": "f439c2d6-b2d6-43f7-97e1-ac7455a09ad5",
+            "slug": "king-frederick-the-great-of-prussia-7-flute-sonatas",
+            "title": "King Frederick the Great of Prussia 7 Flute Sonatas",
+            "upc": "5991813269829",
+            "kind": "album",
+            "score": 10,
+            "imageUrl": "https://idagio-images.global.ssl.fastly.net/albums/5991813269829/main.jpg",
+            "participants": [
+                {
+                    "id": 14459566,
+                    "type": "soloist",
+                    "name": "Mary Oleskiewicz",
+                    "numOccurrences": 21,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Mary",
+                        "surname": "Oleskiewicz",
+                        "instrument": "Flute",
+                        "instrumentID": 645
+                    }
+                },
+                {
+                    "id": 11557860,
+                    "type": "soloist",
+                    "name": "Balázs Máté",
+                    "numOccurrences": 21,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Balázs",
+                        "surname": "Máté",
+                        "instrument": "Violoncello",
+                        "instrumentID": 3277
+                    }
+                },
+                {
+                    "id": 14462153,
+                    "type": "soloist",
+                    "name": "David Schulenberg",
+                    "numOccurrences": 21,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "David",
+                        "surname": "Schulenberg",
+                        "instrument": "Fortepiano",
+                        "instrumentID": 11248989
+                    }
+                },
+                {
+                    "id": 14926719,
+                    "type": "composer",
+                    "name": "Frederick II",
+                    "numOccurrences": 21,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Frederick",
+                        "surname": "II",
+                        "instrument": null,
+                        "instrumentID": null
+                    }
+                }
+            ],
+            "matchedQueries": [
+                "titleAutocomplete",
+                "participants.nameAutocomplete",
+                "participants.namePhonetic"
+            ]
+        },
+        {
+            "id": "eeea5676-cd0f-467a-9b25-6e71ad4e1227",
+            "slug": "frederic-hand-odyssey",
+            "title": "Frederic Hand: Odyssey",
+            "upc": "888295374446",
+            "kind": "album",
+            "score": 10,
+            "imageUrl": "https://idagio-images.global.ssl.fastly.net/albums/888295374446/main.jpg",
+            "participants": [
+                {
+                    "id": 11646778,
+                    "type": "soloist",
+                    "name": "David Leisner",
+                    "numOccurrences": 1,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "David",
+                        "surname": "Leisner",
+                        "instrument": "Guitar",
+                        "instrumentID": 3316
+                    }
+                },
+                {
+                    "id": 28105685,
+                    "type": "soloist",
+                    "name": "Jayna Nelson",
+                    "numOccurrences": 1,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Jayna",
+                        "surname": "Nelson",
+                        "instrument": "Flute",
+                        "instrumentID": 645
+                    }
+                },
+                {
+                    "id": 10834114,
+                    "type": "composer",
+                    "name": "Anonymous (Traditional)",
+                    "numOccurrences": 1,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "",
+                        "surname": "Anonymous (Traditional)",
+                        "instrument": null,
+                        "instrumentID": null
+                    }
+                },
+                {
+                    "id": 61233,
+                    "type": "composer",
+                    "name": "Christoph Willibald Gluck",
+                    "numOccurrences": 1,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Christoph Willibald",
+                        "surname": "Gluck",
+                        "instrument": null,
+                        "instrumentID": null
+                    }
+                },
+                {
+                    "id": 12238320,
+                    "type": "composer",
+                    "name": "Frederic Hand",
+                    "numOccurrences": 10,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Frederic",
+                        "surname": "Hand",
+                        "instrument": "Guitar",
+                        "instrumentID": 3316
+                    }
+                },
+                {
+                    "id": 12238320,
+                    "type": "soloist",
+                    "name": "Frederic Hand",
+                    "numOccurrences": 12,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Frederic",
+                        "surname": "Hand",
+                        "instrument": "Guitar",
+                        "instrumentID": 3316
+                    }
+                }
+            ],
+            "matchedQueries": [
+                "participants.nameMatch",
+                "titleAutocomplete",
+                "titleAndParticipantName",
+                "participants.nameAutocomplete",
+                "participants.namePhonetic"
+            ]
+        },
+        {
+            "id": "e0a2f728-e8c4-46a9-bbc6-5b531798b078",
+            "slug": "frederick-fennell-conducts-the-music-of-leroy-anderson",
+            "title": "Frederick Fennell Conducts The Music Of Leroy Anderson",
+            "upc": "00028943201322",
+            "kind": "album",
+            "score": 10,
+            "imageUrl": "https://idagio-images.global.ssl.fastly.net/albums/00028943201322/main.jpg",
+            "participants": [
+                {
+                    "id": 18063650,
+                    "type": "ensemble",
+                    "name": "London Pops Orchestra",
+                    "numOccurrences": 9,
+                    "ensemble": {
+                        "function": "orchestra"
+                    },
+                    "person": null
+                },
+                {
+                    "id": 6719016,
+                    "type": "ensemble",
+                    "name": "Eastman-Rochester Pops Orchestra",
+                    "numOccurrences": 14,
+                    "ensemble": {
+                        "function": "orchestra"
+                    },
+                    "person": null
+                },
+                {
+                    "id": 3776418,
+                    "type": "conductor",
+                    "name": "Frederick Fennell",
+                    "numOccurrences": 23,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Frederick",
+                        "surname": "Fennell",
+                        "instrument": null,
+                        "instrumentID": null
+                    }
+                },
+                {
+                    "id": 11418857,
+                    "type": "composer",
+                    "name": "Leroy Anderson",
+                    "numOccurrences": 23,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Leroy",
+                        "surname": "Anderson",
+                        "instrument": null,
+                        "instrumentID": null
+                    }
+                }
+            ],
+            "matchedQueries": [
+                "titleAutocomplete",
+                "participants.nameAutocomplete",
+                "participants.namePhonetic"
+            ]
+        },
+        {
+            "id": "d1c2f298-e852-4df7-929d-46d93f11b59a",
+            "slug": "frederick-septimus-kelly-a-race-against-time",
+            "title": "Frederick Septimus Kelly: A Race Against Time",
+            "upc": "00028948145799",
+            "kind": "album",
+            "score": 10,
+            "imageUrl": "https://idagio-images.global.ssl.fastly.net/albums/00028948145799/main.jpg",
+            "participants": [
+                {
+                    "id": 17956200,
+                    "type": "soloist",
+                    "name": "Adrian Tamburini",
+                    "numOccurrences": 1,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Adrian",
+                        "surname": "Tamburini",
+                        "instrument": "Bass",
+                        "instrumentID": 3247
+                    }
+                },
+                {
+                    "id": 10834114,
+                    "type": "composer",
+                    "name": "Anonymous (Traditional)",
+                    "numOccurrences": 1,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "",
+                        "surname": "Anonymous (Traditional)",
+                        "instrument": null,
+                        "instrumentID": null
+                    }
+                },
+                {
+                    "id": 12392796,
+                    "type": "ensemble",
+                    "name": "Tasmanian Symphony Orchestra",
+                    "numOccurrences": 1,
+                    "ensemble": {
+                        "function": "orchestra"
+                    },
+                    "person": null
+                },
+                {
+                    "id": 17956208,
+                    "type": "soloist",
+                    "name": "Simon Lobelson",
+                    "numOccurrences": 1,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Simon",
+                        "surname": "Lobelson",
+                        "instrument": "Baritone",
+                        "instrumentID": 3241
+                    }
+                },
+                {
+                    "id": 14376995,
+                    "type": "conductor",
+                    "name": "Johannes Fritzsch",
+                    "numOccurrences": 1,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Johannes",
+                        "surname": "Fritzsch",
+                        "instrument": null,
+                        "instrumentID": null
+                    }
+                },
+                {
+                    "id": 17952464,
+                    "type": "composer",
+                    "name": "Will Letters",
+                    "numOccurrences": 1,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Will",
+                        "surname": "Letters",
+                        "instrument": null,
+                        "instrumentID": null
+                    }
+                },
+                {
+                    "id": 15315906,
+                    "type": "soloist",
+                    "name": "Andrew Goodwin",
+                    "numOccurrences": 3,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Andrew",
+                        "surname": "Goodwin",
+                        "instrument": "Tenor",
+                        "instrumentID": 642
+                    }
+                },
+                {
+                    "id": 17787622,
+                    "type": "soloist",
+                    "name": "Caroline Almonte",
+                    "numOccurrences": 3,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Caroline",
+                        "surname": "Almonte",
+                        "instrument": "Piano",
+                        "instrumentID": 3256
+                    }
+                },
+                {
+                    "id": 17955771,
+                    "type": "soloist",
+                    "name": "Christopher Latham",
+                    "numOccurrences": 5,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Christopher",
+                        "surname": "Latham",
+                        "instrument": "Violin",
+                        "instrumentID": 3265
+                    }
+                },
+                {
+                    "id": 14709916,
+                    "type": "soloist",
+                    "name": "Christina Wilson",
+                    "numOccurrences": 11,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Christina",
+                        "surname": "Wilson",
+                        "instrument": "Mezzo-soprano",
+                        "instrumentID": 3235
+                    }
+                },
+                {
+                    "id": 17955778,
+                    "type": "soloist",
+                    "name": "Louise Page",
+                    "numOccurrences": 13,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Louise",
+                        "surname": "Page",
+                        "instrument": "Soprano",
+                        "instrumentID": 3232
+                    }
+                },
+                {
+                    "id": 12396736,
+                    "type": "soloist",
+                    "name": "Tamara Anna Cislowska",
+                    "numOccurrences": 22,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Tamara Anna",
+                        "surname": "Cislowska",
+                        "instrument": "Piano",
+                        "instrumentID": 3256
+                    }
+                },
+                {
+                    "id": 17955775,
+                    "type": "soloist",
+                    "name": "Alan Hicks",
+                    "numOccurrences": 22,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Alan",
+                        "surname": "Hicks",
+                        "instrument": "Piano",
+                        "instrumentID": 3256
+                    }
+                },
+                {
+                    "id": 12149199,
+                    "type": "composer",
+                    "name": "Frederick Septimus Kelly",
+                    "numOccurrences": 46,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Frederick Septimus",
+                        "surname": "Kelly",
+                        "instrument": null,
+                        "instrumentID": null
+                    }
+                }
+            ],
+            "matchedQueries": [
+                "titleAutocomplete",
+                "participants.nameAutocomplete",
+                "participants.namePhonetic"
+            ]
+        },
+        {
+            "id": "c7c84f07-38cc-4488-b2da-e3e11c523c74",
+            "slug": "frederic-rzewski-4-pieces-hard-cuts-and-the-housewifes-lament",
+            "title": "Frederic Rzewski: 4 Pieces, Hard Cuts & The Housewife's Lament",
+            "upc": "636943975923",
+            "kind": "album",
+            "score": 10,
+            "imageUrl": "https://idagio-images.global.ssl.fastly.net/albums/636943975923/main.jpg",
+            "participants": [
+                {
+                    "id": 12190211,
+                    "type": "conductor",
+                    "name": "Arnold Marinissen",
+                    "numOccurrences": 3,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Arnold",
+                        "surname": "Marinissen",
+                        "instrument": "Percussion",
+                        "instrumentID": 3313
+                    }
+                },
+                {
+                    "id": 12191423,
+                    "type": "ensemble",
+                    "name": "Lunapark",
+                    "numOccurrences": 3,
+                    "ensemble": {
+                        "function": "chamber-music-ensemble"
+                    },
+                    "person": null
+                },
+                {
+                    "id": 11605797,
+                    "type": "soloist",
+                    "name": "Ralph van Raat",
+                    "numOccurrences": 8,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Ralph van",
+                        "surname": "Raat",
+                        "instrument": "Piano",
+                        "instrumentID": 3256
+                    }
+                },
+                {
+                    "id": 11755585,
+                    "type": "composer",
+                    "name": "Frederic Rzewski",
+                    "numOccurrences": 8,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Frederic",
+                        "surname": "Rzewski",
+                        "instrument": null,
+                        "instrumentID": null
+                    }
+                }
+            ],
+            "matchedQueries": [
+                "participants.nameMatch",
+                "titleAutocomplete",
+                "titleAndParticipantName",
+                "participants.nameAutocomplete",
+                "participants.namePhonetic"
+            ]
+        },
+        {
+            "id": "c1191fcc-7add-4b6d-9db3-3640a8a35098",
+            "slug": "frederica-von-stade-sings-highlights-from-monteverdi-and-massenet",
+            "title": "Frederica von Stade Sings Highlights from Monteverdi and Massenet",
+            "upc": "886445800531",
+            "kind": "album",
+            "score": 10,
+            "imageUrl": "https://idagio-images.global.ssl.fastly.net/albums/886445800531/main.jpg",
+            "participants": [
+                {
+                    "id": 18121515,
+                    "type": "soloist",
+                    "name": "Ruth Welting",
+                    "numOccurrences": 1,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Ruth",
+                        "surname": "Welting",
+                        "instrument": "Soprano",
+                        "instrumentID": 3232
+                    }
+                },
+                {
+                    "id": 3845,
+                    "type": "soloist",
+                    "name": "Nicolai Gedda",
+                    "numOccurrences": 1,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Nicolai",
+                        "surname": "Gedda",
+                        "instrument": "Tenor",
+                        "instrumentID": 642
+                    }
+                },
+                {
+                    "id": 16223993,
+                    "type": "soloist",
+                    "name": "Patrick Power",
+                    "numOccurrences": 1,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Patrick",
+                        "surname": "Power",
+                        "instrument": "Tenor",
+                        "instrumentID": 642
+                    }
+                },
+                {
+                    "id": 15330148,
+                    "type": "soloist",
+                    "name": "Richard Stilwell",
+                    "numOccurrences": 1,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Richard",
+                        "surname": "Stilwell",
+                        "instrument": "Baritone",
+                        "instrumentID": 3241
+                    }
+                },
+                {
+                    "id": 3366763,
+                    "type": "ensemble",
+                    "name": "Ambrosian Singers",
+                    "numOccurrences": 1,
+                    "ensemble": {
+                        "function": "choir"
+                    },
+                    "person": null
+                },
+                {
+                    "id": 18896307,
+                    "type": "soloist",
+                    "name": "Nucci Condò",
+                    "numOccurrences": 2,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Nucci",
+                        "surname": "Condò",
+                        "instrument": "Soprano",
+                        "instrumentID": 3232
+                    }
+                },
+                {
+                    "id": 11276092,
+                    "type": "conductor",
+                    "name": "Raymond Leppard",
+                    "numOccurrences": 4,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Raymond",
+                        "surname": "Leppard",
+                        "instrument": null,
+                        "instrumentID": null
+                    }
+                },
+                {
+                    "id": 63122,
+                    "type": "composer",
+                    "name": "Claudio Monteverdi",
+                    "numOccurrences": 4,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Claudio",
+                        "surname": "Monteverdi",
+                        "instrument": null,
+                        "instrumentID": null
+                    }
+                },
+                {
+                    "id": 3064,
+                    "type": "ensemble",
+                    "name": "London Philharmonic Orchestra",
+                    "numOccurrences": 4,
+                    "ensemble": {
+                        "function": "orchestra"
+                    },
+                    "person": null
+                },
+                {
+                    "id": 778,
+                    "type": "ensemble",
+                    "name": "Philharmonia Orchestra",
+                    "numOccurrences": 5,
+                    "ensemble": {
+                        "function": "orchestra"
+                    },
+                    "person": null
+                },
+                {
+                    "id": 1167316,
+                    "type": "conductor",
+                    "name": "Julius Rudel",
+                    "numOccurrences": 5,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Julius",
+                        "surname": "Rudel",
+                        "instrument": "Organ",
+                        "instrumentID": 3262
+                    }
+                },
+                {
+                    "id": 86480,
+                    "type": "composer",
+                    "name": "Jules Massenet",
+                    "numOccurrences": 5,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Jules",
+                        "surname": "Massenet",
+                        "instrument": null,
+                        "instrumentID": null
+                    }
+                },
+                {
+                    "id": 11288116,
+                    "type": "soloist",
+                    "name": "Frederica von Stade",
+                    "numOccurrences": 9,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Frederica von",
+                        "surname": "Stade",
+                        "instrument": "Mezzo-soprano",
+                        "instrumentID": 3235
+                    }
+                }
+            ],
+            "matchedQueries": [
+                "titleAutocomplete",
+                "participants.nameAutocomplete"
+            ]
+        },
+        {
+            "id": "bf9f8766-ea02-4fb9-8066-9e6b80320f9c",
+            "slug": "frederica-von-stade-song-recital",
+            "title": "Frederica von Stade Song Recital",
+            "upc": "884977731019",
+            "kind": "album",
+            "score": 10,
+            "imageUrl": "https://idagio-images.global.ssl.fastly.net/albums/884977731019/main.jpg",
+            "participants": [
+                {
+                    "id": 18073895,
+                    "type": "composer",
+                    "name": "Carol Hall",
+                    "numOccurrences": 1,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Carol",
+                        "surname": "Hall",
+                        "instrument": null,
+                        "instrumentID": null
+                    }
+                },
+                {
+                    "id": 86356,
+                    "type": "composer",
+                    "name": "Henry Purcell",
+                    "numOccurrences": 1,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Henry",
+                        "surname": "Purcell",
+                        "instrument": null,
+                        "instrumentID": null
+                    }
+                },
+                {
+                    "id": 66821,
+                    "type": "composer",
+                    "name": "John Dowland",
+                    "numOccurrences": 2,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "John",
+                        "surname": "Dowland",
+                        "instrument": null,
+                        "instrumentID": null
+                    }
+                },
+                {
+                    "id": 61325,
+                    "type": "composer",
+                    "name": "Franz Liszt",
+                    "numOccurrences": 3,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Franz",
+                        "surname": "Liszt",
+                        "instrument": null,
+                        "instrumentID": null
+                    }
+                },
+                {
+                    "id": 61404,
+                    "type": "composer",
+                    "name": "Claude Debussy",
+                    "numOccurrences": 3,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Claude",
+                        "surname": "Debussy",
+                        "instrument": null,
+                        "instrumentID": null
+                    }
+                },
+                {
+                    "id": 67615,
+                    "type": "composer",
+                    "name": "Joseph Canteloube",
+                    "numOccurrences": 4,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Joseph",
+                        "surname": "Canteloube",
+                        "instrument": null,
+                        "instrumentID": null
+                    }
+                },
+                {
+                    "id": 11288116,
+                    "type": "soloist",
+                    "name": "Frederica von Stade",
+                    "numOccurrences": 14,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Frederica von",
+                        "surname": "Stade",
+                        "instrument": "Mezzo-soprano",
+                        "instrumentID": 3235
+                    }
+                },
+                {
+                    "id": 11563179,
+                    "type": "soloist",
+                    "name": "Martin Katz",
+                    "numOccurrences": 14,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Martin",
+                        "surname": "Katz",
+                        "instrument": "Piano",
+                        "instrumentID": 3256
+                    }
+                }
+            ],
+            "matchedQueries": [
+                "titleAutocomplete",
+                "participants.nameAutocomplete"
+            ]
+        }
+    ],
+    "playlists": [],
+    "top_hits": [
+        {
+            "id": 61312,
+            "forename": "Frédéric",
+            "surname": "Chopin",
+            "name": "Frédéric Chopin",
+            "functions": [
+                "composer"
+            ],
+            "popularity": 0.2812776107,
+            "score": 81.61318,
+            "kind": "person",
+            "matchedQueries": []
+        },
+        {
+            "id": 13176589,
+            "title": {
+                "title": "Studies on Frédéric Chopin's Études",
+                "popularTitle": "",
+                "subtitle": "",
+                "structuralSubtitle": ""
+            },
+            "defaultRecordingId": 13176866,
+            "composers": [
+                {
+                    "id": 87228,
+                    "forename": "Leopold",
+                    "surname": "Godowsky",
+                    "name": "Leopold Godowsky",
+                    "functions": [
+                        "composer"
+                    ],
+                    "popularity": 0,
+                    "score": 1601.2915,
+                    "kind": "person",
+                    "matchedQueries": []
+                }
+            ],
+            "authors": [
+                {
+                    "key": "composer",
+                    "authorType": "Composer",
+                    "persons": [
+                        {
+                            "id": 87228,
+                            "forename": "Leopold",
+                            "surname": "Godowsky",
+                            "name": "Leopold Godowsky"
+                        }
+                    ]
+                },
+                {
+                    "key": "composer_original_work",
+                    "authorType": "Composer original work",
+                    "persons": [
+                        {
+                            "id": 61312,
+                            "forename": "Frédéric",
+                            "surname": "Chopin",
+                            "name": "Frédéric Chopin"
+                        }
+                    ]
+                }
+            ],
+            "popularity": 0.0381778456,
+            "score": 1600.2915,
+            "kind": "work",
+            "matchedQueries": []
+        },
+        {
+            "id": "ff52349a-0523-47cd-bcdf-d08aac84f642",
+            "slug": "plays-chopin",
+            "title": "Plays Frédéric Chopin",
+            "upc": "00028947643470",
+            "kind": "album",
+            "score": 10,
+            "imageUrl": "https://idagio-images.global.ssl.fastly.net/albums/00028947643470/main.jpg",
+            "participants": [
+                {
+                    "id": 13420561,
+                    "type": "soloist",
+                    "name": "Daniil Trifonov",
+                    "numOccurrences": 11,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Daniil",
+                        "surname": "Trifonov",
+                        "instrument": "Piano",
+                        "instrumentID": 3256
+                    }
+                },
+                {
+                    "id": 61312,
+                    "type": "composer",
+                    "name": "Frédéric Chopin",
+                    "numOccurrences": 11,
+                    "ensemble": null,
+                    "person": {
+                        "forename": "Frédéric",
+                        "surname": "Chopin",
+                        "instrument": null,
+                        "instrumentID": null
+                    }
+                }
+            ],
+            "matchedQueries": [
+                "participants.nameMatch",
+                "titleAutocomplete",
+                "titleAndParticipantName",
+                "participants.nameAutocomplete",
+                "participants.namePhonetic"
+            ]
+        }
+    ],
+    "order": [
+        "persons",
+        "ensembles",
+        "works",
+        "recordings",
+        "pieces",
+        "albums",
+        "playlists"
+    ]
+}

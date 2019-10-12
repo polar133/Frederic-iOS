@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SearchBusinessLogic {
-  func doSomething(request: Search.Something.Request)
+  func doSomething(request: Search.Artists.Request)
 }
 
 protocol SearchDataStore {
@@ -23,11 +23,11 @@ class SearchInteractor: SearchBusinessLogic, SearchDataStore {
 
   // MARK: Do something
 
-  func doSomething(request: Search.Something.Request) {
+  func doSomething(request: Search.Artists.Request) {
     worker = SearchWorker()
-    worker?.doSomeWork()
+    //worker?.doSearch()
 
-    let response = Search.Something.Response()
-    presenter?.presentSomething(response: response)
+    //let response = Search.Something.Response()
+    //presenter?.presentSomething(response: response)
   }
 }

@@ -8,15 +8,18 @@
 
 import UIKit
 
-enum Search {
-  // MARK: Use cases
+typealias ArtistsResponse = Search.Artists.Response
 
-  enum Something {
-    struct Request {
+enum Search {
+
+    // MARK: Use cases
+    enum Artists {
+        struct Request {
+        }
+        struct Response: Decodable {
+            let artists: Persons
+        }
+        struct ViewModel {
+        }
     }
-    struct Response {
-    }
-    struct ViewModel {
-    }
-  }
 }
