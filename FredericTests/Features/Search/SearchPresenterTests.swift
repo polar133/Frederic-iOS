@@ -11,49 +11,49 @@ import XCTest
 
 // swiftlint:disable all
 class SearchPresenterTests: XCTestCase {
-  // MARK: Subject under test
+    // MARK: Subject under test
 
-  var sut: SearchPresenter!
+    var sut: SearchPresenter!
 
-  // MARK: Test lifecycle
+    // MARK: Test lifecycle
 
-  override func setUp() {
-    super.setUp()
-    setupSearchPresenter()
-  }
-
-  override func tearDown() {
-    super.tearDown()
-  }
-
-  // MARK: Test setup
-
-  func setupSearchPresenter() {
-    sut = SearchPresenter()
-  }
-
-  // MARK: Test doubles
-
-  class SearchDisplayLogicSpy: SearchDisplayLogic {
-    var displaySomethingCalled = false
-
-    func displaySomething(viewModel: Search.Artists.ViewModel) {
-      displaySomethingCalled = true
+    override func setUp() {
+        super.setUp()
+        setupSearchPresenter()
     }
-  }
 
-  // MARK: Tests
+    override func tearDown() {
+        super.tearDown()
+    }
 
-  func testPresentSomething() {
-    // Given
-    let spy = SearchDisplayLogicSpy()
-    sut.viewController = spy
-    //let response = Search.Something.Response()
+    // MARK: Test setup
 
-    // When
-    //sut.presentSomething(response: response)
+    func setupSearchPresenter() {
+        sut = SearchPresenter()
+    }
 
-    // Then
-    //XCTAssertTrue(spy.displaySomethingCalled, "presentSomething(response:) should ask the view controller to display the result")
-  }
+    // MARK: Test doubles
+
+    class SearchDisplayLogicSpy: SearchDisplayLogic {
+        var displaySomethingCalled = false
+
+        func displayArtists(viewModels: [Search.Artists.ViewModel]) {
+            displaySomethingCalled = true
+        }
+    }
+
+    // MARK: Tests
+
+    func testPresentSomething() {
+        // Given
+        let spy = SearchDisplayLogicSpy()
+        sut.viewController = spy
+        let response = Search.Artists.Response(artists: Persons(persons: []))
+
+        // When
+        sut.presentSearchResult(response: response)
+
+        // Then
+        XCTAssertTrue(spy.displaySomethingCalled, "presentSearchResult(response:) should ask the view controller to display the result")
+    }
 }

@@ -9,68 +9,92 @@
 import UIKit
 
 protocol SearchDisplayLogic: class {
-  func displaySomething(viewModel: Search.Artists.ViewModel)
+    func displayArtists(viewModels: [Search.Artists.ViewModel])
 }
 
 class SearchViewController: UIViewController, SearchDisplayLogic {
-  var interactor: SearchBusinessLogic?
-  var router: (NSObjectProtocol & SearchRoutingLogic & SearchDataPassing)?
+    var interactor: SearchBusinessLogic?
+    var router: (NSObjectProtocol & SearchRoutingLogic & SearchDataPassing)?
+    var viewModels: [Search.Artists.ViewModel] = []
 
-  // MARK: Object lifecycle
+    @IBOutlet private weak var tableView: UITableView!
 
-  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    setup()
-  }
-
-  required init?(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder)
-    setup()
-  }
-
-  // MARK: Setup
-
-  private func setup() {
-    let viewController = self
-    let interactor = SearchInteractor()
-    let presenter = SearchPresenter()
-    let router = SearchRouter()
-    viewController.interactor = interactor
-    viewController.router = router
-    interactor.presenter = presenter
-    presenter.viewController = viewController
-    router.viewController = viewController
-    router.dataStore = interactor
-  }
-
-  // MARK: Routing
-
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if let scene = segue.identifier {
-      let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-      if let router = router, router.responds(to: selector) {
-        router.perform(selector, with: segue)
-      }
+    // MARK: Object lifecycle
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
     }
-  }
 
-  // MARK: View lifecycle
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    doSomething()
-  }
+    // MARK: Setup
+    private func setup() {
+        let viewController = self
+        let interactor = SearchInteractor()
+        let presenter = SearchPresenter()
+        let router = SearchRouter()
+        viewController.interactor = interactor
+        viewController.router = router
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+        router.viewController = viewController
+        router.dataStore = interactor
+    }
 
-  // MARK: Do something
+    // MARK: View lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = "Frederic"
+        setupNavigationBar()
+        setupTableView()
+    }
 
-  //@IBOutlet weak var nameTextField: UITextField!
+    // MARK: Setups
+    func setupNavigationBar() {
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.green]
+        let search = UISearchController(searchResultsController: nil)
+        search.searchResultsUpdater = self
+        search.searchBar.placeholder = "Search for artists"
+        self.navigationItem.searchController = search
+    }
 
-  func doSomething() {
-    let request = Search.Artists.Request()
-    interactor?.doSomething(request: request)
-  }
+    func setupTableView() {
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+    }
 
-  func displaySomething(viewModel: Search.Artists.ViewModel) {
-    //nameTextField.text = viewModel.name
-  }
+    func search(_ text: String) {
+        let request = Search.Artists.Request(search: text)
+        interactor?.search(request: request)
+    }
+
+    func displayArtists(viewModels: [Search.Artists.ViewModel]) {
+        self.viewModels = viewModels
+        self.tableView.reloadData()
+    }
+}
+
+extension SearchViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let text = searchController.searchBar.text else {
+            return
+        }
+        self.search(text)
+    }
+
+}
+
+extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModels.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+
 }

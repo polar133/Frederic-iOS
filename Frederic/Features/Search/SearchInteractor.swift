@@ -9,25 +9,23 @@
 import UIKit
 
 protocol SearchBusinessLogic {
-  func doSomething(request: Search.Artists.Request)
+    func search(request: Search.Artists.Request)
 }
 
 protocol SearchDataStore {
-  //var name: String { get set }
+    var artist: Artist? { get set }
 }
 
 class SearchInteractor: SearchBusinessLogic, SearchDataStore {
-  var presenter: SearchPresentationLogic?
-  var worker: SearchWorker?
-  //var name: String = ""
+    var presenter: SearchPresentationLogic?
+    var worker: SearchWorker?
+    var artist: Artist?
 
-  // MARK: Do something
-
-  func doSomething(request: Search.Artists.Request) {
-    worker = SearchWorker()
-    //worker?.doSearch()
-
-    //let response = Search.Something.Response()
-    //presenter?.presentSomething(response: response)
-  }
+    // MARK: Get Artists
+    func search(request: Search.Artists.Request) {
+        worker = SearchWorker()
+        worker?.doSearch(search: request.search, callback: { [weak self] result in
+            //TODO: Implement
+        })
+    }
 }

@@ -15,6 +15,7 @@ enum Search {
     // MARK: Use cases
     enum Artists {
         struct Request {
+            let search: String
         }
         struct Response: Decodable {
             let artists: Persons

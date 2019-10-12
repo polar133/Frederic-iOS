@@ -9,16 +9,16 @@
 import UIKit
 
 protocol SearchPresentationLogic {
-  func presentSomething(response: Search.Artists.Response)
+    func presentSearchResult(response: Search.Artists.Response)
 }
 
 class SearchPresenter: SearchPresentationLogic {
-  weak var viewController: SearchDisplayLogic?
+    weak var viewController: SearchDisplayLogic?
 
-  // MARK: Do something
+    // MARK: present search result
 
-  func presentSomething(response: Search.Artists.Response) {
-    let viewModel = Search.Artists.ViewModel()
-    viewController?.displaySomething(viewModel: viewModel)
-  }
+    func presentSearchResult(response: Search.Artists.Response) {
+        let viewModel = Search.Artists.ViewModel()
+        viewController?.displayArtists(viewModels: [viewModel])
+    }
 }

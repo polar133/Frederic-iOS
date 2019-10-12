@@ -11,49 +11,60 @@ import XCTest
 
 // swiftlint:disable all
 class SearchInteractorTests: XCTestCase {
-  // MARK: Subject under test
+    // MARK: Subject under test
 
-  var sut: SearchInteractor!
+    var sut: SearchInteractor!
 
-  // MARK: Test lifecycle
+    // MARK: Test lifecycle
 
-  override func setUp() {
-    super.setUp()
-    setupSearchInteractor()
-  }
-
-  override func tearDown() {
-    super.tearDown()
-  }
-
-  // MARK: Test setup
-
-  func setupSearchInteractor() {
-    sut = SearchInteractor()
-  }
-
-  // MARK: Test doubles
-
-  class SearchPresentationLogicSpy: SearchPresentationLogic {
-    var presentSomethingCalled = false
-
-    func presentSomething(response: Search.Artists.Response) {
-      presentSomethingCalled = true
+    override func setUp() {
+        super.setUp()
+        setupSearchInteractor()
     }
-  }
 
-  // MARK: Tests
+    override func tearDown() {
+        super.tearDown()
+    }
 
-  func testDoSomething() {
-    // Given
-    let spy = SearchPresentationLogicSpy()
-    sut.presenter = spy
-    let request = Search.Artists.Request()
+    // MARK: Test setup
 
-    // When
-    sut.doSomething(request: request)
+    func setupSearchInteractor() {
+        sut = SearchInteractor()
+    }
 
-    // Then
-    XCTAssertTrue(spy.presentSomethingCalled, "doSomething(request:) should ask the presenter to format the result")
-  }
+    // MARK: Tests
+
+    func testSearch() {
+        // Given
+        let spy = SearchPresentationLogicSpy()
+        let workerspy = SearchWorkerSuccessSpy()
+        sut.worker = workerspy
+        sut.presenter = spy
+        let request = Search.Artists.Request(search: "frederic")
+
+        // When
+        sut.search(request: request)
+
+        // Then
+        XCTAssertTrue(spy.presentSearchResultCalled, "doSomething(request:) should ask the presenter to format the result")
+    }
 }
+
+class SearchWorkerSuccessSpy: SearchWorker {
+    override func doSearch(search: String, callback: @escaping (Result<ArtistsResponse>) -> Void) {
+        let bundle = Bundle(for: SearchInteractorTests.classForCoder())
+        let jsonFile =  bundle.path(forResource: "get_search_200", ofType: "json")
+        let data = try? Data(contentsOf: URL(fileURLWithPath: jsonFile!), options: [])
+        let serialized = try? JSONDecoder().decode(ArtistsResponse.self, from: data!)
+        callback(.success(serialized!))
+    }
+}
+
+class SearchPresentationLogicSpy: SearchPresentationLogic {
+    var presentSearchResultCalled = false
+
+    func presentSearchResult(response: Search.Artists.Response) {
+        presentSearchResultCalled = true
+    }
+}
+
