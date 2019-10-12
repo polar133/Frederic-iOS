@@ -23,20 +23,24 @@ class SearchRouter: NSObject, SearchRoutingLogic, SearchDataPassing {
     // MARK: Routing
 
     func routeToArtistDetail() {
-
+        guard let dataStore = self.dataStore, let viewController = self.viewController else {
+            return
+        }
+        let artistViewController = ArtistDetailViewController()
+        var artistDataStore = artistViewController.router?.dataStore
+        passDataToArtistDetail(source: dataStore, destination: &artistDataStore)
+        navigateToArtistDetail(source: viewController, destination: artistViewController)
     }
 
     // MARK: Navigation
 
-    //func navigateToSomewhere(source: SearchViewController, destination: SomewhereViewController)
-    //{
-    //  source.show(destination, sender: nil)
-    //}
+    func navigateToArtistDetail(source: SearchViewController, destination: ArtistDetailViewController) {
+        source.navigationController?.pushViewController(destination, animated: true)
+    }
 
     // MARK: Passing data
 
-    //func passDataToSomewhere(source: SearchDataStore, destination: inout SomewhereDataStore)
-    //{
-    //  destination.name = source.name
-    //}
+    func passDataToArtistDetail(source: SearchDataStore, destination: inout ArtistDetailDataStore?) {
+        destination?.artist = source.artist
+    }
 }

@@ -13,12 +13,12 @@ protocol ArtistDetailBusinessLogic {
 }
 
 protocol ArtistDetailDataStore {
-    //var name: String { get set }
+    var artist: Artist? { get set }
 }
 
 class ArtistDetailInteractor: ArtistDetailBusinessLogic, ArtistDetailDataStore {
     var presenter: ArtistDetailPresentationLogic?
-    //var name: String = ""
+    var artist: Artist?
 
     // MARK: Do something
 

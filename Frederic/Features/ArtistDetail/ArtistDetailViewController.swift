@@ -13,6 +13,7 @@ protocol ArtistDetailDisplayLogic: class {
 
 class ArtistDetailViewController: UIViewController, ArtistDetailDisplayLogic {
     var interactor: ArtistDetailBusinessLogic?
+    var router: (NSObjectProtocol & ArtistDetailRoutingLogic & ArtistDetailDataPassing)?
 
     // MARK: Object lifecycle
 
@@ -32,9 +33,13 @@ class ArtistDetailViewController: UIViewController, ArtistDetailDisplayLogic {
         let viewController = self
         let interactor = ArtistDetailInteractor()
         let presenter = ArtistDetailPresenter()
+        let router = ArtistDetailRouter()
         viewController.interactor = interactor
+        viewController.router = router
         interactor.presenter = presenter
         presenter.viewController = viewController
+        router.viewController = viewController
+        router.dataStore = interactor
     }
 
     // MARK: View lifecycle

@@ -36,6 +36,8 @@
 		F39A635E23528B5A00E28C58 /* ArtistDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A635823528B5A00E28C58 /* ArtistDetailInteractor.swift */; };
 		F39A636523528C3800E28C58 /* ArtistDetailInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A636123528C3800E28C58 /* ArtistDetailInteractorTests.swift */; };
 		F39A636723528C3800E28C58 /* ArtistDetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A636323528C3800E28C58 /* ArtistDetailPresenterTests.swift */; };
+		F39A63692352906700E28C58 /* ArtistDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A63682352906700E28C58 /* ArtistDetailRouter.swift */; };
+		F39A636B235291AE00E28C58 /* ArtistDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F39A636A235291AE00E28C58 /* ArtistDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		F39A635823528B5A00E28C58 /* ArtistDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailInteractor.swift; sourceTree = "<group>"; };
 		F39A636123528C3800E28C58 /* ArtistDetailInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailInteractorTests.swift; sourceTree = "<group>"; };
 		F39A636323528C3800E28C58 /* ArtistDetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailPresenterTests.swift; sourceTree = "<group>"; };
+		F39A63682352906700E28C58 /* ArtistDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailRouter.swift; sourceTree = "<group>"; };
+		F39A636A235291AE00E28C58 /* ArtistDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +252,8 @@
 				F39A635623528B5A00E28C58 /* ArtistDetailModels.swift */,
 				F39A635723528B5A00E28C58 /* ArtistDetailViewController.swift */,
 				F39A635823528B5A00E28C58 /* ArtistDetailInteractor.swift */,
+				F39A63682352906700E28C58 /* ArtistDetailRouter.swift */,
+				F39A636A235291AE00E28C58 /* ArtistDetailViewController.xib */,
 			);
 			path = ArtistDetail;
 			sourceTree = "<group>";
@@ -347,6 +353,7 @@
 				F39A63062351489A00E28C58 /* LaunchScreen.storyboard in Resources */,
 				F39A634B23522F9400E28C58 /* API.plist in Resources */,
 				F39A63032351489A00E28C58 /* Assets.xcassets in Resources */,
+				F39A636B235291AE00E28C58 /* ArtistDetailViewController.xib in Resources */,
 				F39A632E235160EB00E28C58 /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,6 +397,7 @@
 			files = (
 				F39A635C23528B5A00E28C58 /* ArtistDetailModels.swift in Sources */,
 				F39A634923522ED900E28C58 /* FredericAPI.swift in Sources */,
+				F39A63692352906700E28C58 /* ArtistDetailRouter.swift in Sources */,
 				F39A632A2351602500E28C58 /* SearchViewController.swift in Sources */,
 				F39A6350235250E400E28C58 /* ArtistCell.swift in Sources */,
 				F39A63282351602500E28C58 /* SearchRouter.swift in Sources */,
