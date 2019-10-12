@@ -32,6 +32,7 @@ class SearchWorker {
             callback(.failure(FredericError.invalidURL))
             return
         }
+        urlSession.invalidateAndCancel()
         urlSession.dataTask(with: urlRequest, completionHandler: { data, response, error in
             let response = response as? HTTPURLResponse
             if let data = data, let response = response, (200..<299).contains(response.statusCode) {
