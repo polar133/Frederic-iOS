@@ -11,6 +11,7 @@ import UIKit
 protocol SearchDisplayLogic: class {
     func displayArtists(viewModels: [Search.Artists.ViewModel])
     func displayLoading()
+    func hideLoading()
     func displayError()
     func displayEmptyState()
     func goToArtistDetail()
@@ -84,7 +85,15 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     // MARK: SearchDisplayLogic Functions
 
     func displayLoading() {
+        DispatchQueue.main.async {
+             UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        }
+    }
 
+    func hideLoading() {
+        DispatchQueue.main.async {
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        }
     }
 
     func displayArtists(viewModels: [Search.Artists.ViewModel]) {

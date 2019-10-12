@@ -120,6 +120,7 @@ class SearchPresentationLogicSpy: SearchPresentationLogic {
     var presentLoadingCalled = false
     var presentErrorResultCalled = false
     var presentArtistDetailCalled = false
+    var dismissLoadingCalled = false
 
     func presentSearchResult(response: Search.Artists.Response) {
         presentSearchResultCalled = true
@@ -127,6 +128,10 @@ class SearchPresentationLogicSpy: SearchPresentationLogic {
 
     func presentLoading() {
         presentLoadingCalled = true
+    }
+
+    func dismissLoading() {
+        dismissLoadingCalled = true
     }
 
     func presentErrorResult() {

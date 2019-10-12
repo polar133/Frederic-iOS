@@ -110,6 +110,7 @@ class SearchPresenterTests: XCTestCase {
 class SearchDisplayLogicSpy: SearchDisplayLogic {
     var displayArtistsCalled = false
     var displayLoadingCalled = false
+    var hideLoadingCalled = false
     var displayEmptyStateCalled = false
     var displayErrorCalled = false
     var goToArtistDetailCalled = false
@@ -120,6 +121,10 @@ class SearchDisplayLogicSpy: SearchDisplayLogic {
 
     func displayLoading() {
         displayLoadingCalled = true
+    }
+
+    func hideLoading() {
+        hideLoadingCalled = true
     }
 
     func displayError() {

@@ -34,6 +34,7 @@ class SearchInteractor: SearchBusinessLogic, SearchDataStore {
         }
         self.presenter?.presentLoading()
         worker?.doSearch(search: request.search, callback: { [weak self] result in
+            self?.presenter?.dismissLoading()
             switch result {
             case .success(let response):
                 self?.artists = response

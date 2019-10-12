@@ -11,6 +11,7 @@ import Foundation
 protocol SearchPresentationLogic {
     func presentSearchResult(response: Search.Artists.Response)
     func presentLoading()
+    func dismissLoading()
     func presentErrorResult()
     func presentArtistDetail()
 }
@@ -34,6 +35,10 @@ class SearchPresenter: SearchPresentationLogic {
 
     func presentLoading() {
         self.viewController?.displayLoading()
+    }
+
+    func dismissLoading() {
+        self.viewController?.hideLoading()
     }
 
     func presentArtistDetail() {
