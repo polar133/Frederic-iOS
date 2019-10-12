@@ -10,7 +10,26 @@
 		F39A62FA2351489600E28C58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A62F92351489600E28C58 /* AppDelegate.swift */; };
 		F39A63032351489A00E28C58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F39A63022351489A00E28C58 /* Assets.xcassets */; };
 		F39A63062351489A00E28C58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F39A63042351489A00E28C58 /* LaunchScreen.storyboard */; };
-		F39A63112351489A00E28C58 /* FredericTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A63102351489A00E28C58 /* FredericTests.swift */; };
+		F39A63262351602500E28C58 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A63202351602500E28C58 /* SearchPresenter.swift */; };
+		F39A63272351602500E28C58 /* SearchWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A63212351602500E28C58 /* SearchWorker.swift */; };
+		F39A63282351602500E28C58 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A63222351602500E28C58 /* SearchRouter.swift */; };
+		F39A63292351602500E28C58 /* SearchModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A63232351602500E28C58 /* SearchModels.swift */; };
+		F39A632A2351602500E28C58 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A63242351602500E28C58 /* SearchViewController.swift */; };
+		F39A632B2351602500E28C58 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A63252351602500E28C58 /* SearchInteractor.swift */; };
+		F39A632E235160EB00E28C58 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F39A632D235160EB00E28C58 /* SearchViewController.xib */; };
+		F39A63362352179300E28C58 /* SearchInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A63322352179300E28C58 /* SearchInteractorTests.swift */; };
+		F39A63372352179300E28C58 /* SearchWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A63332352179300E28C58 /* SearchWorkerTests.swift */; };
+		F39A63382352179300E28C58 /* SearchPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A63342352179300E28C58 /* SearchPresenterTests.swift */; };
+		F39A633B235218B700E28C58 /* get_search_200.json in Resources */ = {isa = PBXBuildFile; fileRef = F39A633A235218B700E28C58 /* get_search_200.json */; };
+		F39A633D2352195000E28C58 /* get_search_400.json in Resources */ = {isa = PBXBuildFile; fileRef = F39A633C2352195000E28C58 /* get_search_400.json */; };
+		F39A634123521AB000E28C58 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A634023521AB000E28C58 /* Result.swift */; };
+		F39A634423521C2000E28C58 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A634323521C2000E28C58 /* Artist.swift */; };
+		F39A634723522EAD00E28C58 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A634623522EAD00E28C58 /* MockURLProtocol.swift */; };
+		F39A634923522ED900E28C58 /* FredericAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A634823522ED900E28C58 /* FredericAPI.swift */; };
+		F39A634B23522F9400E28C58 /* API.plist in Resources */ = {isa = PBXBuildFile; fileRef = F39A634A23522F9400E28C58 /* API.plist */; };
+		F39A634D2352332600E28C58 /* FredericError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A634C2352332600E28C58 /* FredericError.swift */; };
+		F39A6350235250E400E28C58 /* ArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A634E235250E400E28C58 /* ArtistCell.swift */; };
+		F39A6351235250E400E28C58 /* ArtistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F39A634F235250E400E28C58 /* ArtistCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,8 +49,27 @@
 		F39A63052351489A00E28C58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F39A63072351489A00E28C58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F39A630C2351489A00E28C58 /* FredericTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FredericTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F39A63102351489A00E28C58 /* FredericTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FredericTests.swift; sourceTree = "<group>"; };
 		F39A63122351489A00E28C58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F39A63202351602500E28C58 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		F39A63212351602500E28C58 /* SearchWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWorker.swift; sourceTree = "<group>"; };
+		F39A63222351602500E28C58 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		F39A63232351602500E28C58 /* SearchModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModels.swift; sourceTree = "<group>"; };
+		F39A63242351602500E28C58 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		F39A63252351602500E28C58 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		F39A632D235160EB00E28C58 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		F39A63322352179300E28C58 /* SearchInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractorTests.swift; sourceTree = "<group>"; };
+		F39A63332352179300E28C58 /* SearchWorkerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWorkerTests.swift; sourceTree = "<group>"; };
+		F39A63342352179300E28C58 /* SearchPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenterTests.swift; sourceTree = "<group>"; };
+		F39A633A235218B700E28C58 /* get_search_200.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = get_search_200.json; sourceTree = "<group>"; };
+		F39A633C2352195000E28C58 /* get_search_400.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = get_search_400.json; sourceTree = "<group>"; };
+		F39A634023521AB000E28C58 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		F39A634323521C2000E28C58 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		F39A634623522EAD00E28C58 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		F39A634823522ED900E28C58 /* FredericAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FredericAPI.swift; sourceTree = "<group>"; };
+		F39A634A23522F9400E28C58 /* API.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = API.plist; path = ../API.plist; sourceTree = "<group>"; };
+		F39A634C2352332600E28C58 /* FredericError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FredericError.swift; sourceTree = "<group>"; };
+		F39A634E235250E400E28C58 /* ArtistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCell.swift; sourceTree = "<group>"; };
+		F39A634F235250E400E28C58 /* ArtistCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,9 +111,11 @@
 		F39A62F82351489600E28C58 /* Frederic */ = {
 			isa = PBXGroup;
 			children = (
+				F39A634223521C0700E28C58 /* Models */,
+				F39A633F235219F600E28C58 /* Networking */,
+				F39A633E235219D800E28C58 /* Resources */,
+				F39A631E2351594F00E28C58 /* Features */,
 				F39A62F92351489600E28C58 /* AppDelegate.swift */,
-				F39A63022351489A00E28C58 /* Assets.xcassets */,
-				F39A63042351489A00E28C58 /* LaunchScreen.storyboard */,
 				F39A63072351489A00E28C58 /* Info.plist */,
 			);
 			path = Frederic;
@@ -84,10 +124,107 @@
 		F39A630F2351489A00E28C58 /* FredericTests */ = {
 			isa = PBXGroup;
 			children = (
-				F39A63102351489A00E28C58 /* FredericTests.swift */,
+				F39A634523522EA200E28C58 /* Utils */,
+				F39A63392352188200E28C58 /* Resources */,
+				F39A632F2352177D00E28C58 /* Features */,
 				F39A63122351489A00E28C58 /* Info.plist */,
 			);
 			path = FredericTests;
+			sourceTree = "<group>";
+		};
+		F39A631E2351594F00E28C58 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				F39A631F2351595A00E28C58 /* Search */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		F39A631F2351595A00E28C58 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				F39A632C235160C600E28C58 /* Views */,
+				F39A63202351602500E28C58 /* SearchPresenter.swift */,
+				F39A63212351602500E28C58 /* SearchWorker.swift */,
+				F39A63222351602500E28C58 /* SearchRouter.swift */,
+				F39A63232351602500E28C58 /* SearchModels.swift */,
+				F39A63242351602500E28C58 /* SearchViewController.swift */,
+				F39A63252351602500E28C58 /* SearchInteractor.swift */,
+				F39A632D235160EB00E28C58 /* SearchViewController.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		F39A632C235160C600E28C58 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F39A634E235250E400E28C58 /* ArtistCell.swift */,
+				F39A634F235250E400E28C58 /* ArtistCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F39A632F2352177D00E28C58 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				F39A63302352178200E28C58 /* Search */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		F39A63302352178200E28C58 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				F39A63322352179300E28C58 /* SearchInteractorTests.swift */,
+				F39A63332352179300E28C58 /* SearchWorkerTests.swift */,
+				F39A63342352179300E28C58 /* SearchPresenterTests.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		F39A63392352188200E28C58 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F39A633A235218B700E28C58 /* get_search_200.json */,
+				F39A633C2352195000E28C58 /* get_search_400.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F39A633E235219D800E28C58 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F39A63022351489A00E28C58 /* Assets.xcassets */,
+				F39A63042351489A00E28C58 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F39A633F235219F600E28C58 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F39A634A23522F9400E28C58 /* API.plist */,
+				F39A634023521AB000E28C58 /* Result.swift */,
+				F39A634823522ED900E28C58 /* FredericAPI.swift */,
+				F39A634C2352332600E28C58 /* FredericError.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		F39A634223521C0700E28C58 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F39A634323521C2000E28C58 /* Artist.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F39A634523522EA200E28C58 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F39A634623522EAD00E28C58 /* MockURLProtocol.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,8 +309,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F39A6351235250E400E28C58 /* ArtistCell.xib in Resources */,
 				F39A63062351489A00E28C58 /* LaunchScreen.storyboard in Resources */,
+				F39A634B23522F9400E28C58 /* API.plist in Resources */,
 				F39A63032351489A00E28C58 /* Assets.xcassets in Resources */,
+				F39A632E235160EB00E28C58 /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +321,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F39A633B235218B700E28C58 /* get_search_200.json in Resources */,
+				F39A633D2352195000E28C58 /* get_search_400.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +354,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F39A634923522ED900E28C58 /* FredericAPI.swift in Sources */,
+				F39A632A2351602500E28C58 /* SearchViewController.swift in Sources */,
+				F39A6350235250E400E28C58 /* ArtistCell.swift in Sources */,
+				F39A63282351602500E28C58 /* SearchRouter.swift in Sources */,
+				F39A63262351602500E28C58 /* SearchPresenter.swift in Sources */,
+				F39A634423521C2000E28C58 /* Artist.swift in Sources */,
 				F39A62FA2351489600E28C58 /* AppDelegate.swift in Sources */,
+				F39A63272351602500E28C58 /* SearchWorker.swift in Sources */,
+				F39A634D2352332600E28C58 /* FredericError.swift in Sources */,
+				F39A63292351602500E28C58 /* SearchModels.swift in Sources */,
+				F39A634123521AB000E28C58 /* Result.swift in Sources */,
+				F39A632B2351602500E28C58 /* SearchInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +373,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F39A63112351489A00E28C58 /* FredericTests.swift in Sources */,
+				F39A63382352179300E28C58 /* SearchPresenterTests.swift in Sources */,
+				F39A63372352179300E28C58 /* SearchWorkerTests.swift in Sources */,
+				F39A63362352179300E28C58 /* SearchInteractorTests.swift in Sources */,
+				F39A634723522EAD00E28C58 /* MockURLProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
