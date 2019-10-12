@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F39A62FA2351489600E28C58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A62F92351489600E28C58 /* AppDelegate.swift */; };
-		F39A62FC2351489600E28C58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A62FB2351489600E28C58 /* SceneDelegate.swift */; };
-		F39A62FE2351489600E28C58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A62FD2351489600E28C58 /* ViewController.swift */; };
-		F39A63012351489600E28C58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F39A62FF2351489600E28C58 /* Main.storyboard */; };
 		F39A63032351489A00E28C58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F39A63022351489A00E28C58 /* Assets.xcassets */; };
 		F39A63062351489A00E28C58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F39A63042351489A00E28C58 /* LaunchScreen.storyboard */; };
 		F39A63112351489A00E28C58 /* FredericTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A63102351489A00E28C58 /* FredericTests.swift */; };
@@ -29,9 +26,6 @@
 /* Begin PBXFileReference section */
 		F39A62F62351489600E28C58 /* Frederic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Frederic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F39A62F92351489600E28C58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F39A62FB2351489600E28C58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F39A62FD2351489600E28C58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F39A63002351489600E28C58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F39A63022351489A00E28C58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F39A63052351489A00E28C58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F39A63072351489A00E28C58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,9 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				F39A62F92351489600E28C58 /* AppDelegate.swift */,
-				F39A62FB2351489600E28C58 /* SceneDelegate.swift */,
-				F39A62FD2351489600E28C58 /* ViewController.swift */,
-				F39A62FF2351489600E28C58 /* Main.storyboard */,
 				F39A63022351489A00E28C58 /* Assets.xcassets */,
 				F39A63042351489A00E28C58 /* LaunchScreen.storyboard */,
 				F39A63072351489A00E28C58 /* Info.plist */,
@@ -109,6 +100,7 @@
 				F39A62F22351489600E28C58 /* Sources */,
 				F39A62F32351489600E28C58 /* Frameworks */,
 				F39A62F42351489600E28C58 /* Resources */,
+				F39A631B235151DE00E28C58 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -182,7 +174,6 @@
 			files = (
 				F39A63062351489A00E28C58 /* LaunchScreen.storyboard in Resources */,
 				F39A63032351489A00E28C58 /* Assets.xcassets in Resources */,
-				F39A63012351489600E28C58 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,14 +186,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F39A631B235151DE00E28C58 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F39A62F22351489600E28C58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F39A62FE2351489600E28C58 /* ViewController.swift in Sources */,
 				F39A62FA2351489600E28C58 /* AppDelegate.swift in Sources */,
-				F39A62FC2351489600E28C58 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,14 +235,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F39A62FF2351489600E28C58 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F39A63002351489600E28C58 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F39A63042351489A00E28C58 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,7 +296,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -348,7 +350,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -371,7 +373,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = carlos.polar.Frederic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -388,7 +390,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = carlos.polar.Frederic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
