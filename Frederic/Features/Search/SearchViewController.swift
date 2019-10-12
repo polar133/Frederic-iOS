@@ -70,6 +70,7 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     func setupTableView() {
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.register(UINib(nibName: ArtistCell.nibName, bundle: Bundle.main), forCellReuseIdentifier: ArtistCell.reuseIdentifier)
     }
 
     // MARK: Search
@@ -87,7 +88,9 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
 
     func displayArtists(viewModels: [Search.Artists.ViewModel]) {
         self.viewModels = viewModels
-        self.tableView.reloadData()
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
+        }
     }
 
     func displayError() {
@@ -107,14 +110,24 @@ extension SearchViewController: UISearchResultsUpdating {
     }
 
 }
+
 // MARK: UITableView functions
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 44
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModels.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell: ArtistCell = tableView.dequeueReusableCell(withIdentifier: ArtistCell.reuseIdentifier, for: indexPath) as? ArtistCell else {
+            return UITableViewCell()
+        }
+        cell.loadArtist(viewModel: viewModels[indexPath.row])
+        return cell
     }
 
 }
