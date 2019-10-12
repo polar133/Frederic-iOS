@@ -30,6 +30,12 @@
 		F39A634D2352332600E28C58 /* FredericError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A634C2352332600E28C58 /* FredericError.swift */; };
 		F39A6350235250E400E28C58 /* ArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A634E235250E400E28C58 /* ArtistCell.swift */; };
 		F39A6351235250E400E28C58 /* ArtistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F39A634F235250E400E28C58 /* ArtistCell.xib */; };
+		F39A635923528B5A00E28C58 /* ArtistDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A635323528B5A00E28C58 /* ArtistDetailPresenter.swift */; };
+		F39A635C23528B5A00E28C58 /* ArtistDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A635623528B5A00E28C58 /* ArtistDetailModels.swift */; };
+		F39A635D23528B5A00E28C58 /* ArtistDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A635723528B5A00E28C58 /* ArtistDetailViewController.swift */; };
+		F39A635E23528B5A00E28C58 /* ArtistDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A635823528B5A00E28C58 /* ArtistDetailInteractor.swift */; };
+		F39A636523528C3800E28C58 /* ArtistDetailInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A636123528C3800E28C58 /* ArtistDetailInteractorTests.swift */; };
+		F39A636723528C3800E28C58 /* ArtistDetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A636323528C3800E28C58 /* ArtistDetailPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +76,12 @@
 		F39A634C2352332600E28C58 /* FredericError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FredericError.swift; sourceTree = "<group>"; };
 		F39A634E235250E400E28C58 /* ArtistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCell.swift; sourceTree = "<group>"; };
 		F39A634F235250E400E28C58 /* ArtistCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistCell.xib; sourceTree = "<group>"; };
+		F39A635323528B5A00E28C58 /* ArtistDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailPresenter.swift; sourceTree = "<group>"; };
+		F39A635623528B5A00E28C58 /* ArtistDetailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailModels.swift; sourceTree = "<group>"; };
+		F39A635723528B5A00E28C58 /* ArtistDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailViewController.swift; sourceTree = "<group>"; };
+		F39A635823528B5A00E28C58 /* ArtistDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailInteractor.swift; sourceTree = "<group>"; };
+		F39A636123528C3800E28C58 /* ArtistDetailInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailInteractorTests.swift; sourceTree = "<group>"; };
+		F39A636323528C3800E28C58 /* ArtistDetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +147,7 @@
 		F39A631E2351594F00E28C58 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				F39A635223528B4100E28C58 /* ArtistDetail */,
 				F39A631F2351595A00E28C58 /* Search */,
 			);
 			path = Features;
@@ -167,6 +180,7 @@
 		F39A632F2352177D00E28C58 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				F39A635F23528C2400E28C58 /* ArtistDetail */,
 				F39A63302352178200E28C58 /* Search */,
 			);
 			path = Features;
@@ -225,6 +239,26 @@
 				F39A634623522EAD00E28C58 /* MockURLProtocol.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		F39A635223528B4100E28C58 /* ArtistDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F39A635323528B5A00E28C58 /* ArtistDetailPresenter.swift */,
+				F39A635623528B5A00E28C58 /* ArtistDetailModels.swift */,
+				F39A635723528B5A00E28C58 /* ArtistDetailViewController.swift */,
+				F39A635823528B5A00E28C58 /* ArtistDetailInteractor.swift */,
+			);
+			path = ArtistDetail;
+			sourceTree = "<group>";
+		};
+		F39A635F23528C2400E28C58 /* ArtistDetail */ = {
+			isa = PBXGroup;
+			children = (
+				F39A636123528C3800E28C58 /* ArtistDetailInteractorTests.swift */,
+				F39A636323528C3800E28C58 /* ArtistDetailPresenterTests.swift */,
+			);
+			path = ArtistDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,17 +388,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F39A635C23528B5A00E28C58 /* ArtistDetailModels.swift in Sources */,
 				F39A634923522ED900E28C58 /* FredericAPI.swift in Sources */,
 				F39A632A2351602500E28C58 /* SearchViewController.swift in Sources */,
 				F39A6350235250E400E28C58 /* ArtistCell.swift in Sources */,
 				F39A63282351602500E28C58 /* SearchRouter.swift in Sources */,
+				F39A635D23528B5A00E28C58 /* ArtistDetailViewController.swift in Sources */,
 				F39A63262351602500E28C58 /* SearchPresenter.swift in Sources */,
 				F39A634423521C2000E28C58 /* Artist.swift in Sources */,
+				F39A635E23528B5A00E28C58 /* ArtistDetailInteractor.swift in Sources */,
 				F39A62FA2351489600E28C58 /* AppDelegate.swift in Sources */,
 				F39A63272351602500E28C58 /* SearchWorker.swift in Sources */,
 				F39A634D2352332600E28C58 /* FredericError.swift in Sources */,
 				F39A63292351602500E28C58 /* SearchModels.swift in Sources */,
 				F39A634123521AB000E28C58 /* Result.swift in Sources */,
+				F39A635923528B5A00E28C58 /* ArtistDetailPresenter.swift in Sources */,
 				F39A632B2351602500E28C58 /* SearchInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,6 +411,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F39A636723528C3800E28C58 /* ArtistDetailPresenterTests.swift in Sources */,
+				F39A636523528C3800E28C58 /* ArtistDetailInteractorTests.swift in Sources */,
 				F39A63382352179300E28C58 /* SearchPresenterTests.swift in Sources */,
 				F39A63372352179300E28C58 /* SearchWorkerTests.swift in Sources */,
 				F39A63362352179300E28C58 /* SearchInteractorTests.swift in Sources */,
