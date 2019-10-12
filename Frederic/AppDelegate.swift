@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        let navController = UINavigationController(rootViewController: UIViewController())
+        let navController = UINavigationController(rootViewController: SearchViewController())
         window?.rootViewController = navController
         return true
     }

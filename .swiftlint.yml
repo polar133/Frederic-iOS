@@ -72,6 +72,9 @@ cyclomatic_complexity:
 
 indentation: 2
 
+nesting:
+    type_level: 2
+
 warning_threshold: 30
 
 identifier_name:
