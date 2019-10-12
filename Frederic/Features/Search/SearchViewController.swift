@@ -13,6 +13,7 @@ protocol SearchDisplayLogic: class {
     func displayLoading()
     func displayError()
     func displayEmptyState()
+    func goToArtistDetail()
 }
 
 class SearchViewController: UIViewController, SearchDisplayLogic {
@@ -98,6 +99,12 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
 
     func displayEmptyState() {
     }
+
+    func goToArtistDetail() {
+        DispatchQueue.main.async { [weak self] in
+            self?.router?.routeToArtistDetail()
+        }
+    }
 }
 
 // MARK: UISearchViewController functions
@@ -130,4 +137,8 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let viewModel = viewModels[indexPath.row]
+        self.interactor?.selectArtist(id: viewModel.id)
+    }
 }

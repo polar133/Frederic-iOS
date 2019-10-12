@@ -21,6 +21,7 @@ enum Search {
             let artists: Persons
         }
         struct ViewModel {
+            let id: Int
             let name: String
         }
     }

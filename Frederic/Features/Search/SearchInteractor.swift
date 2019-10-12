@@ -10,6 +10,7 @@ import Foundation
 
 protocol SearchBusinessLogic {
     func search(request: Search.Artists.Request)
+    func selectArtist(id: Int)
 }
 
 protocol SearchDataStore {
@@ -20,6 +21,7 @@ class SearchInteractor: SearchBusinessLogic, SearchDataStore {
     var presenter: SearchPresentationLogic?
     var worker: SearchWorker?
     var artist: Artist?
+    var artists: ArtistsResponse?
 
     init(worker: SearchWorker = SearchWorker()) {
         self.worker = worker
@@ -34,10 +36,19 @@ class SearchInteractor: SearchBusinessLogic, SearchDataStore {
         worker?.doSearch(search: request.search, callback: { [weak self] result in
             switch result {
             case .success(let response):
+                self?.artists = response
                 self?.presenter?.presentSearchResult(response: response)
             case .failure(let error):
                 self?.presenter?.presentErrorResult()
             }
         })
+    }
+
+    func selectArtist(id: Int) {
+        guard let artist = self.artists?.artists.persons.first(where: { $0.id == id }) else {
+            return
+        }
+        self.artist = artist
+        self.presenter?.presentArtistDetail()
     }
 }

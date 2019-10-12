@@ -12,6 +12,7 @@ protocol SearchPresentationLogic {
     func presentSearchResult(response: Search.Artists.Response)
     func presentLoading()
     func presentErrorResult()
+    func presentArtistDetail()
 }
 
 class SearchPresenter: SearchPresentationLogic {
@@ -19,7 +20,7 @@ class SearchPresenter: SearchPresentationLogic {
 
     // MARK: present search result
     func presentSearchResult(response: Search.Artists.Response) {
-        let viewModels: [Search.Artists.ViewModel] = response.artists.persons.compactMap { return Search.Artists.ViewModel(name: $0.name) }
+        let viewModels: [Search.Artists.ViewModel] = response.artists.persons.compactMap { return Search.Artists.ViewModel(id: $0.id, name: $0.name) }
         if viewModels.isEmpty {
             self.viewController?.displayEmptyState()
         } else {
@@ -33,5 +34,9 @@ class SearchPresenter: SearchPresentationLogic {
 
     func presentLoading() {
         self.viewController?.displayLoading()
+    }
+
+    func presentArtistDetail() {
+        self.viewController?.goToArtistDetail()
     }
 }

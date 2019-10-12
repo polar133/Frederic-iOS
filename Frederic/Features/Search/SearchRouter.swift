@@ -9,45 +9,34 @@
 import UIKit
 
 @objc protocol SearchRoutingLogic {
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
+    func routeToArtistDetail()
 }
 
 protocol SearchDataPassing {
-  var dataStore: SearchDataStore? { get }
+    var dataStore: SearchDataStore? { get }
 }
 
 class SearchRouter: NSObject, SearchRoutingLogic, SearchDataPassing {
-  weak var viewController: SearchViewController?
-  var dataStore: SearchDataStore?
+    weak var viewController: SearchViewController?
+    var dataStore: SearchDataStore?
 
-  // MARK: Routing
+    // MARK: Routing
 
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
-  //{
-  //  if let segue = segue {
-  //    let destinationVC = segue.destination as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //  } else {
-  //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-  //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-  //  }
-  //}
+    func routeToArtistDetail() {
 
-  // MARK: Navigation
+    }
 
-  //func navigateToSomewhere(source: SearchViewController, destination: SomewhereViewController)
-  //{
-  //  source.show(destination, sender: nil)
-  //}
+    // MARK: Navigation
 
-  // MARK: Passing data
+    //func navigateToSomewhere(source: SearchViewController, destination: SomewhereViewController)
+    //{
+    //  source.show(destination, sender: nil)
+    //}
 
-  //func passDataToSomewhere(source: SearchDataStore, destination: inout SomewhereDataStore)
-  //{
-  //  destination.name = source.name
-  //}
+    // MARK: Passing data
+
+    //func passDataToSomewhere(source: SearchDataStore, destination: inout SomewhereDataStore)
+    //{
+    //  destination.name = source.name
+    //}
 }

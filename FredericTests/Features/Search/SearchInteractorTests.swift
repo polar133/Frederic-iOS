@@ -82,12 +82,44 @@ class SearchInteractorTests: XCTestCase {
         XCTAssertTrue(spy.presentErrorResultCalled)
     }
 
+    func testSelectArtist() {
+        // Given
+        let spy = SearchPresentationLogicSpy()
+        sut.presenter = spy
+        sut.artist = nil
+        let workerspy = SearchWorkerSuccessSpy()
+        sut.worker = workerspy
+        let request = Search.Artists.Request(search: "frederic")
+        sut.search(request: request)
+
+        // When
+        sut.selectArtist(id: 11539849)
+
+        // Then
+        XCTAssertTrue(spy.presentArtistDetailCalled)
+        XCTAssertNotNil(sut.artist)
+    }
+
+    func testSelectArtistWithoutArtists() {
+        // Given
+        let spy = SearchPresentationLogicSpy()
+        sut.presenter = spy
+        sut.artist = nil
+        // When
+        sut.selectArtist(id: 11539849)
+
+        // Then
+        XCTAssertFalse(spy.presentArtistDetailCalled)
+        XCTAssertNil(sut.artist)
+    }
+
 }
 
 class SearchPresentationLogicSpy: SearchPresentationLogic {
     var presentSearchResultCalled = false
     var presentLoadingCalled = false
     var presentErrorResultCalled = false
+    var presentArtistDetailCalled = false
 
     func presentSearchResult(response: Search.Artists.Response) {
         presentSearchResultCalled = true
@@ -99,6 +131,10 @@ class SearchPresentationLogicSpy: SearchPresentationLogic {
 
     func presentErrorResult() {
         presentErrorResultCalled = true
+    }
+
+    func presentArtistDetail() {
+        presentArtistDetailCalled = true
     }
 }
 
