@@ -9,7 +9,7 @@
 import Foundation
 
 // MARK: States of networking result
-enum Result<T, Error: Swift.Error> {
+enum Result<T> {
     case success(T)
-    case failure(Error)
+    case failure(FredericError)
 }

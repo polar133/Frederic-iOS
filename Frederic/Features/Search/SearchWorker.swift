@@ -16,6 +16,34 @@ class SearchWorker {
         self.urlSession = urlSession
     }
 
-    func doSearch(callback: @escaping (Result<ArtistsResponse, Error>) -> Void) {
+    func doSearch(search: String, callback: @escaping (Result<ArtistsResponse>) -> Void) {
+        let params = [
+            "term": search
+        ]
+        guard var url = URLComponents(string: FredericAPI.search) else {
+            callback(.failure(FredericError.invalidURL))
+            return
+        }
+        url.queryItems = params.map { key, value in
+            URLQueryItem(name: key, value: value)
+        }
+        url.percentEncodedQuery = url.percentEncodedQuery?.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
+        guard let urlRequest = url.url else {
+            callback(.failure(FredericError.invalidURL))
+            return
+        }
+        urlSession.dataTask(with: urlRequest, completionHandler: { data, response, error in
+            let response = response as? HTTPURLResponse
+            if let data = data, let response = response, (200..<299).contains(response.statusCode) {
+                do {
+                    let value = try JSONDecoder().decode(ArtistsResponse.self, from: data)
+                    callback(.success(value))
+                } catch {
+                    callback(.failure(FredericError.responseSerialization))
+                }
+            } else {
+                callback(.failure(FredericError.from(response?.statusCode, error: error, content: data)))
+            }
+        }).resume()
     }
 }
