@@ -32,9 +32,31 @@ class SearchPresenterTests: XCTestCase {
         sut = SearchPresenter()
     }
 
+    func loadPersons() -> [Artist] {
+        let bundle = Bundle(for: SearchWorkerTests.classForCoder())
+        let jsonFile =  bundle.path(forResource: "get_search_200", ofType: "json")
+        let data = try? Data(contentsOf: URL(fileURLWithPath: jsonFile!), options: [])
+        let serialized = try? JSONDecoder().decode(ArtistsResponse.self, from: data!)
+        return serialized?.artists.persons ?? []
+    }
+
     // MARK: Tests
 
     func testPresentSearchResult() {
+        // Given
+        let spy = SearchDisplayLogicSpy()
+        sut.viewController = spy
+        let response = Search.Artists.Response(artists: Persons(persons: loadPersons()))
+
+        // When
+        sut.presentSearchResult(response: response)
+
+        // Then
+        XCTAssertFalse(spy.displayEmptyStateCalled)
+        XCTAssertTrue(spy.displayArtistsCalled)
+    }
+
+    func testPresentSearchResultEmpty() {
         // Given
         let spy = SearchDisplayLogicSpy()
         sut.viewController = spy
@@ -44,7 +66,8 @@ class SearchPresenterTests: XCTestCase {
         sut.presentSearchResult(response: response)
 
         // Then
-        XCTAssertTrue(spy.displaySomethingCalled)
+        XCTAssertTrue(spy.displayEmptyStateCalled)
+        XCTAssertFalse(spy.displayArtistsCalled)
     }
 
     func testPresentLoading() {
@@ -58,17 +81,39 @@ class SearchPresenterTests: XCTestCase {
         // Then
         XCTAssertTrue(spy.displayLoadingCalled)
     }
+
+    func testPresentError() {
+        // Given
+        let spy = SearchDisplayLogicSpy()
+        sut.viewController = spy
+
+        // When
+        sut.presentErrorResult()
+
+        // Then
+        XCTAssertTrue(spy.displayErrorCalled)
+    }
 }
 
 class SearchDisplayLogicSpy: SearchDisplayLogic {
-    var displaySomethingCalled = false
+    var displayArtistsCalled = false
     var displayLoadingCalled = false
+    var displayEmptyStateCalled = false
+    var displayErrorCalled = false
 
     func displayArtists(viewModels: [Search.Artists.ViewModel]) {
-        displaySomethingCalled = true
+        displayArtistsCalled = true
     }
 
     func displayLoading() {
         displayLoadingCalled = true
+    }
+
+    func displayError() {
+        displayErrorCalled = true
+    }
+
+    func displayEmptyState() {
+        displayEmptyStateCalled = true
     }
 }

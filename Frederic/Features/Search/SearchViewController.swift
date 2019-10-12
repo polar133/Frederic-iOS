@@ -11,6 +11,8 @@ import UIKit
 protocol SearchDisplayLogic: class {
     func displayArtists(viewModels: [Search.Artists.ViewModel])
     func displayLoading()
+    func displayError()
+    func displayEmptyState()
 }
 
 class SearchViewController: UIViewController, SearchDisplayLogic {
@@ -86,6 +88,12 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     func displayArtists(viewModels: [Search.Artists.ViewModel]) {
         self.viewModels = viewModels
         self.tableView.reloadData()
+    }
+
+    func displayError() {
+    }
+
+    func displayEmptyState() {
     }
 }
 
