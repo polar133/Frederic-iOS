@@ -10,13 +10,16 @@ import UIKit
 
 protocol SearchDisplayLogic: class {
     func displayArtists(viewModels: [Search.Artists.ViewModel])
+    func displayLoading()
 }
 
 class SearchViewController: UIViewController, SearchDisplayLogic {
+
     var interactor: SearchBusinessLogic?
     var router: (NSObjectProtocol & SearchRoutingLogic & SearchDataPassing)?
     var viewModels: [Search.Artists.ViewModel] = []
 
+    // MARK: IBOutlets
     @IBOutlet private weak var tableView: UITableView!
 
     // MARK: Object lifecycle
@@ -67,9 +70,17 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
         self.tableView.dataSource = self
     }
 
+    // MARK: Search
+
     func search(_ text: String) {
         let request = Search.Artists.Request(search: text)
         interactor?.search(request: request)
+    }
+
+    // MARK: SearchDisplayLogic Functions
+
+    func displayLoading() {
+
     }
 
     func displayArtists(viewModels: [Search.Artists.ViewModel]) {
@@ -78,6 +89,7 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     }
 }
 
+// MARK: UISearchViewController functions
 extension SearchViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let text = searchController.searchBar.text else {
@@ -87,7 +99,7 @@ extension SearchViewController: UISearchResultsUpdating {
     }
 
 }
-
+// MARK: UITableView functions
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModels.count

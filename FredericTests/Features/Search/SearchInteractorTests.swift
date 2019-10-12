@@ -46,7 +46,59 @@ class SearchInteractorTests: XCTestCase {
         sut.search(request: request)
 
         // Then
-        XCTAssertTrue(spy.presentSearchResultCalled, "doSomething(request:) should ask the presenter to format the result")
+        XCTAssertTrue(spy.presentLoadingCalled)
+        XCTAssertTrue(spy.presentSearchResultCalled)
+    }
+
+    func testLessWordsInSearch() {
+        // Given
+        let spy = SearchPresentationLogicSpy()
+        sut.presenter = spy
+        let request = Search.Artists.Request(search: "fr")
+
+        // When
+        sut.search(request: request)
+
+        // Then
+        XCTAssertFalse(spy.presentSearchResultCalled)
+        XCTAssertFalse(spy.presentLoadingCalled)
+        XCTAssertFalse(spy.presentErrorResultCalled)
+    }
+
+    func testErrorSearch() {
+        // Given
+        let spy = SearchPresentationLogicSpy()
+        let workerspy = SearchWorkerErrorSpy()
+        sut.worker = workerspy
+        sut.presenter = spy
+        let request = Search.Artists.Request(search: "frederic")
+
+        // When
+        sut.search(request: request)
+
+        // Then
+        XCTAssertTrue(spy.presentLoadingCalled)
+        XCTAssertFalse(spy.presentSearchResultCalled)
+        XCTAssertTrue(spy.presentErrorResultCalled)
+    }
+
+}
+
+class SearchPresentationLogicSpy: SearchPresentationLogic {
+    var presentSearchResultCalled = false
+    var presentLoadingCalled = false
+    var presentErrorResultCalled = false
+
+    func presentSearchResult(response: Search.Artists.Response) {
+        presentSearchResultCalled = true
+    }
+
+    func presentLoading() {
+        presentLoadingCalled = true
+    }
+
+    func presentErrorResult() {
+        presentErrorResultCalled = true
     }
 }
 
@@ -60,11 +112,9 @@ class SearchWorkerSuccessSpy: SearchWorker {
     }
 }
 
-class SearchPresentationLogicSpy: SearchPresentationLogic {
-    var presentSearchResultCalled = false
-
-    func presentSearchResult(response: Search.Artists.Response) {
-        presentSearchResultCalled = true
+class SearchWorkerErrorSpy: SearchWorker {
+    override func doSearch(search: String, callback: @escaping (Result<ArtistsResponse>) -> Void) {
+        callback(.failure(.noInternetConection))
     }
 }
 

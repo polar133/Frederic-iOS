@@ -32,19 +32,9 @@ class SearchPresenterTests: XCTestCase {
         sut = SearchPresenter()
     }
 
-    // MARK: Test doubles
-
-    class SearchDisplayLogicSpy: SearchDisplayLogic {
-        var displaySomethingCalled = false
-
-        func displayArtists(viewModels: [Search.Artists.ViewModel]) {
-            displaySomethingCalled = true
-        }
-    }
-
     // MARK: Tests
 
-    func testPresentSomething() {
+    func testPresentSearchResult() {
         // Given
         let spy = SearchDisplayLogicSpy()
         sut.viewController = spy
@@ -54,6 +44,31 @@ class SearchPresenterTests: XCTestCase {
         sut.presentSearchResult(response: response)
 
         // Then
-        XCTAssertTrue(spy.displaySomethingCalled, "presentSearchResult(response:) should ask the view controller to display the result")
+        XCTAssertTrue(spy.displaySomethingCalled)
+    }
+
+    func testPresentLoading() {
+        // Given
+        let spy = SearchDisplayLogicSpy()
+        sut.viewController = spy
+
+        // When
+        sut.presentLoading()
+
+        // Then
+        XCTAssertTrue(spy.displayLoadingCalled)
+    }
+}
+
+class SearchDisplayLogicSpy: SearchDisplayLogic {
+    var displaySomethingCalled = false
+    var displayLoadingCalled = false
+
+    func displayArtists(viewModels: [Search.Artists.ViewModel]) {
+        displaySomethingCalled = true
+    }
+
+    func displayLoading() {
+        displayLoadingCalled = true
     }
 }

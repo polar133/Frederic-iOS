@@ -6,10 +6,12 @@
 //  Copyright (c) 2019 Carlos Jimenez. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 protocol SearchPresentationLogic {
     func presentSearchResult(response: Search.Artists.Response)
+    func presentLoading()
+    func presentErrorResult()
 }
 
 class SearchPresenter: SearchPresentationLogic {
@@ -20,5 +22,11 @@ class SearchPresenter: SearchPresentationLogic {
     func presentSearchResult(response: Search.Artists.Response) {
         let viewModel = Search.Artists.ViewModel()
         viewController?.displayArtists(viewModels: [viewModel])
+    }
+
+    func presentErrorResult() {
+    }
+
+    func presentLoading() {
     }
 }
