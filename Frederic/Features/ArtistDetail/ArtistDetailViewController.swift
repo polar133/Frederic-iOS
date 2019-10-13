@@ -50,9 +50,19 @@ class ArtistDetailViewController: UIViewController, ArtistDetailDisplayLogic {
         loadArtist()
     }
 
-    // MARK: Do something
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupNavigationBar()
+    }
 
-    //@IBOutlet weak var nameTextField: UITextField!
+    // MARK: Setups
+    func setupNavigationBar() {
+        configureNavigationBar(largeTitleColor: .white,
+                               backgoundColor: self.view.backgroundColor ?? UIColor.clear,
+                               tintColor: .white,
+                               title: "SEARCH_NAME".localized,
+                               preferredLargeTitle: true)
+    }
 
     func loadArtist() {
         let request = ArtistDetail.Profile.Request()

@@ -23,6 +23,7 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     var interactor: SearchBusinessLogic?
     var router: (NSObjectProtocol & SearchRoutingLogic & SearchDataPassing)?
     var viewModels: [Search.Artists.ViewModel] = []
+    var searchController: UISearchController?
     var loadingView: LoadingView?
     var emptyView: EmptyView?
     var errorIsPresented = false
@@ -58,7 +59,6 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "SEARCH_NAME".localized
         setupNavigationBar()
         setupSearchBar()
         setupLoadingView()
@@ -68,26 +68,24 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
 
     // MARK: Setups
     func setupNavigationBar() {
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.navigationBar.tintColor = .white
+        configureNavigationBar(largeTitleColor: .white,
+                               backgoundColor: self.view.backgroundColor ?? UIColor.clear,
+                               tintColor: .white,
+                               title: "SEARCH_NAME".localized,
+                               preferredLargeTitle: true)
+
     }
 
     func setupSearchBar() {
-        let search = UISearchController(searchResultsController: nil)
-        search.searchResultsUpdater = self
-        search.obscuresBackgroundDuringPresentation = false
+        self.searchController = UISearchController(searchResultsController: nil)
+        self.searchController?.searchResultsUpdater = self
+        self.searchController?.obscuresBackgroundDuringPresentation = false
+        self.searchController?.searchBar.barStyle = .blackOpaque
+        self.searchController?.searchBar.placeholder = "SEARCH_BAR".localized
+        self.searchController?.searchBar.autocapitalizationType = .none
+        self.searchController?.searchBar.autocorrectionType = .no
 
-        search.searchBar.barStyle = .blackOpaque
-        search.searchBar.placeholder = "SEARCH_BAR".localized
-        search.searchBar.autocapitalizationType = .none
-        search.searchBar.autocorrectionType = .no
-
-        self.navigationItem.searchController = search
+        self.navigationItem.searchController = self.searchController
         self.navigationItem.hidesSearchBarWhenScrolling = false
     }
 
@@ -207,12 +205,21 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         guard let cell: ArtistCell = tableView.dequeueReusableCell(withIdentifier: ArtistCell.reuseIdentifier, for: indexPath) as? ArtistCell else {
             return UITableViewCell()
         }
+
         cell.loadArtist(viewModel: viewModels[indexPath.row])
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let viewModel = viewModels[indexPath.row]
-        self.interactor?.selectArtist(id: viewModel.id)
+        if self.searchController?.isActive ?? false {
+            self.searchController?.isActive = false
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.3) {
+                self.interactor?.selectArtist(id: viewModel.id)
+            }
+        } else {
+            self.interactor?.selectArtist(id: viewModel.id)
+        }
+
     }
 }

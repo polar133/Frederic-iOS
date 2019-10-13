@@ -22,6 +22,7 @@ class SearchInteractor: SearchBusinessLogic, SearchDataStore {
     var worker: SearchWorker?
     var artist: Artist?
     var artists: ArtistsResponse?
+    var searchWord: String = ""
 
     init(worker: SearchWorker = SearchWorker()) {
         self.worker = worker
@@ -29,11 +30,12 @@ class SearchInteractor: SearchBusinessLogic, SearchDataStore {
 
     // MARK: Get Artists
     func search(request: Search.Artists.Request) {
-        guard request.search.count > 2 else {
+        guard request.search.count > 2, searchWord != request.search else {
             return
         }
+        self.searchWord = request.search
         self.presenter?.presentLoading()
-        worker?.doSearch(search: request.search, callback: { [weak self] result in
+        worker?.doSearch(search: self.searchWord, callback: { [weak self] result in
             self?.presenter?.dismissLoading()
             switch result {
             case .success(let response):
