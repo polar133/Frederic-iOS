@@ -40,7 +40,7 @@ class SearchInteractor: SearchBusinessLogic, SearchDataStore {
                 self?.artists = response
                 self?.presenter?.presentSearchResult(response: response)
             case .failure(let error):
-                self?.presenter?.presentErrorResult()
+                self?.presenter?.presentErrorResult(message: error.localizedDescription)
             }
         })
     }

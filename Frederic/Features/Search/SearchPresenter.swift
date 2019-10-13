@@ -12,7 +12,7 @@ protocol SearchPresentationLogic {
     func presentSearchResult(response: Search.Artists.Response)
     func presentLoading()
     func dismissLoading()
-    func presentErrorResult()
+    func presentErrorResult(message: String)
     func presentArtistDetail()
 }
 
@@ -29,8 +29,8 @@ class SearchPresenter: SearchPresentationLogic {
         }
     }
 
-    func presentErrorResult() {
-        self.viewController?.displayError()
+    func presentErrorResult(message: String) {
+        self.viewController?.displayError(message: message)
     }
 
     func presentLoading() {

@@ -134,7 +134,7 @@ class SearchPresentationLogicSpy: SearchPresentationLogic {
         dismissLoadingCalled = true
     }
 
-    func presentErrorResult() {
+    func presentErrorResult(message: String) {
         presentErrorResultCalled = true
     }
 

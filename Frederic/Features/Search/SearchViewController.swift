@@ -12,8 +12,7 @@ protocol SearchDisplayLogic: class {
     func displayArtists(viewModels: [Search.Artists.ViewModel])
     func displayLoading()
     func hideLoading()
-    func displayError()
-    func hideError()
+    func displayError(message: String)
     func displayEmptyState()
     func goToArtistDetail()
 }
@@ -24,6 +23,7 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     var router: (NSObjectProtocol & SearchRoutingLogic & SearchDataPassing)?
     var viewModels: [Search.Artists.ViewModel] = []
     var loadingView: LoadingView?
+    var errorIsPresented = false
 
     // MARK: IBOutlets
     @IBOutlet private weak var tableView: UITableView!
@@ -128,10 +128,26 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
         }
     }
 
-    func displayError() {
-    }
+    // Note: Will trigger a layout contraint warning
+    /// There is a openradar about this issue  https://openradar.appspot.com/49289931
+    func displayError(message: String) {
+        guard !errorIsPresented else {
+            return
+        }
+        errorIsPresented = true
+        DispatchQueue.main.async { [weak self] in
+            let alert = UIAlertController(title: nil, message: message, preferredStyle: .actionSheet)
+            alert.view.backgroundColor = UIColor.black
+            alert.view.alpha = 0.6
+            alert.view.layer.cornerRadius = 15
 
-    func hideError() {
+            self?.present(alert, animated: true)
+
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2.0) {
+                alert.dismiss(animated: true)
+                self?.errorIsPresented = false
+            }
+        }
     }
 
     func displayEmptyState() {
