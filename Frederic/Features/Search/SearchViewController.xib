@@ -28,17 +28,17 @@
             <color key="backgroundColor" name="Background"/>
             <constraints>
                 <constraint firstItem="IqF-Gy-bVt" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="0ku-xy-fn5"/>
-                <constraint firstItem="IqF-Gy-bVt" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="O7k-Av-AYV"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="IqF-Gy-bVt" secondAttribute="bottom" id="Rhw-9O-msl"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="IqF-Gy-bVt" secondAttribute="trailing" id="cE7-c4-TwX"/>
+                <constraint firstItem="IqF-Gy-bVt" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="uLC-kf-X5f"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="132" y="153"/>
+            <point key="canvasLocation" x="131.8840579710145" y="152.67857142857142"/>
         </view>
     </objects>
     <resources>
         <namedColor name="Background">
-            <color red="0.098520658910000003" green="0.12088134139999999" blue="0.16078931090000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.098999999463558197" green="0.12099999934434891" blue="0.16099999845027924" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

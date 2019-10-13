@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F37686E723535FDE00C6BF39 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = F37686E623535FDE00C6BF39 /* Lottie */; };
+		F37686E92353663A00C6BF39 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37686E82353663900C6BF39 /* LoadingView.swift */; };
+		F37686EB2353664100C6BF39 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F37686EA2353664100C6BF39 /* LoadingView.xib */; };
+		F37686ED235367F600C6BF39 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = F37686EC235367F600C6BF39 /* loading.json */; };
 		F39A62FA2351489600E28C58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A62F92351489600E28C58 /* AppDelegate.swift */; };
 		F39A63032351489A00E28C58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F39A63022351489A00E28C58 /* Assets.xcassets */; };
 		F39A63062351489A00E28C58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F39A63042351489A00E28C58 /* LaunchScreen.storyboard */; };
@@ -52,6 +56,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F37686E82353663900C6BF39 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		F37686EA2353664100C6BF39 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		F37686EC235367F600C6BF39 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		F39A62F62351489600E28C58 /* Frederic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Frederic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F39A62F92351489600E28C58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F39A63022351489A00E28C58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F37686E723535FDE00C6BF39 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +188,8 @@
 			children = (
 				F39A634E235250E400E28C58 /* ArtistCell.swift */,
 				F39A634F235250E400E28C58 /* ArtistCell.xib */,
+				F37686E82353663900C6BF39 /* LoadingView.swift */,
+				F37686EA2353664100C6BF39 /* LoadingView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -215,6 +225,7 @@
 		F39A633E235219D800E28C58 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F37686EC235367F600C6BF39 /* loading.json */,
 				F39A63022351489A00E28C58 /* Assets.xcassets */,
 				F39A63042351489A00E28C58 /* LaunchScreen.storyboard */,
 			);
@@ -295,6 +306,9 @@
 			dependencies = (
 			);
 			name = Frederic;
+			packageProductDependencies = (
+				F37686E623535FDE00C6BF39 /* Lottie */,
+			);
 			productName = Frederic;
 			productReference = F39A62F62351489600E28C58 /* Frederic.app */;
 			productType = "com.apple.product-type.application";
@@ -345,6 +359,9 @@
 				Base,
 			);
 			mainGroup = F39A62ED2351489600E28C58;
+			packageReferences = (
+				F37686E523535FDE00C6BF39 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = F39A62F72351489600E28C58 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -362,8 +379,10 @@
 			files = (
 				F39A6351235250E400E28C58 /* ArtistCell.xib in Resources */,
 				F39A63062351489A00E28C58 /* LaunchScreen.storyboard in Resources */,
+				F37686ED235367F600C6BF39 /* loading.json in Resources */,
 				F39A634B23522F9400E28C58 /* API.plist in Resources */,
 				F39A63032351489A00E28C58 /* Assets.xcassets in Resources */,
+				F37686EB2353664100C6BF39 /* LoadingView.xib in Resources */,
 				F39A636B235291AE00E28C58 /* ArtistDetailViewController.xib in Resources */,
 				F39A632E235160EB00E28C58 /* SearchViewController.xib in Resources */,
 			);
@@ -423,6 +442,7 @@
 				F39A63292351602500E28C58 /* SearchModels.swift in Sources */,
 				F39A634123521AB000E28C58 /* Result.swift in Sources */,
 				F39A635923528B5A00E28C58 /* ArtistDetailPresenter.swift in Sources */,
+				F37686E92353663A00C6BF39 /* LoadingView.swift in Sources */,
 				F39A632B2351602500E28C58 /* SearchInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -683,6 +703,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F37686E523535FDE00C6BF39 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F37686E623535FDE00C6BF39 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F37686E523535FDE00C6BF39 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F39A62EE2351489600E28C58 /* Project object */;
 }

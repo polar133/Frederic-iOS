@@ -22,6 +22,7 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     var interactor: SearchBusinessLogic?
     var router: (NSObjectProtocol & SearchRoutingLogic & SearchDataPassing)?
     var viewModels: [Search.Artists.ViewModel] = []
+    var loadingView: LoadingView!
 
     // MARK: IBOutlets
     @IBOutlet private weak var tableView: UITableView!
@@ -57,12 +58,13 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
         self.title = "Frederic"
         setupNavigationBar()
         setupTableView()
+        setupLoadingView()
     }
 
     // MARK: Setups
     func setupNavigationBar() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.green]
+        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         let search = UISearchController(searchResultsController: nil)
         search.searchResultsUpdater = self
         search.searchBar.placeholder = "Search for artists"
@@ -75,6 +77,10 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
         self.tableView.register(UINib(nibName: ArtistCell.nibName, bundle: Bundle.main), forCellReuseIdentifier: ArtistCell.reuseIdentifier)
     }
 
+    func setupLoadingView() {
+        loadingView = LoadingView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: LoadingView.height))
+    }
+
     // MARK: Search
 
     func search(_ text: String) {
@@ -85,14 +91,16 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     // MARK: SearchDisplayLogic Functions
 
     func displayLoading() {
-        DispatchQueue.main.async {
-             UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        DispatchQueue.main.async { [weak self] in
+            self?.loadingView.startLoading()
+            self?.tableView.tableFooterView = self?.loadingView
         }
     }
 
     func hideLoading() {
-        DispatchQueue.main.async {
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.tableFooterView = nil
+            self?.loadingView.stopLoading()
         }
     }
 
