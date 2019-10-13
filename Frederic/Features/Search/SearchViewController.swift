@@ -69,22 +69,21 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     // MARK: Setups
     func setupNavigationBar() {
         configureNavigationBar(largeTitleColor: .white,
-                               backgoundColor: self.view.backgroundColor ?? UIColor.clear,
+                               backgroundColor: self.view.backgroundColor ?? UIColor.clear,
                                tintColor: .white,
                                title: "SEARCH_NAME".localized,
                                preferredLargeTitle: true)
-
     }
 
     func setupSearchBar() {
         self.searchController = UISearchController(searchResultsController: nil)
         self.searchController?.searchResultsUpdater = self
         self.searchController?.obscuresBackgroundDuringPresentation = false
-        self.searchController?.searchBar.barStyle = .blackOpaque
+        self.searchController?.searchBar.barStyle = .blackTranslucent
         self.searchController?.searchBar.placeholder = "SEARCH_BAR".localized
         self.searchController?.searchBar.autocapitalizationType = .none
         self.searchController?.searchBar.autocorrectionType = .no
-
+        self.searchController?.searchBar.tintColor = .white
         self.navigationItem.searchController = self.searchController
         self.navigationItem.hidesSearchBarWhenScrolling = false
     }

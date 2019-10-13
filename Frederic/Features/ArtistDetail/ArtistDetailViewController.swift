@@ -59,7 +59,7 @@ class ArtistDetailViewController: UIViewController, ArtistDetailDisplayLogic {
     // MARK: Setups
     func setupNavigationBar() {
         configureNavigationBar(largeTitleColor: .white,
-                               backgoundColor: self.view.backgroundColor ?? UIColor.clear,
+                               backgroundColor: self.view.backgroundColor ?? UIColor.clear,
                                tintColor: .white,
                                title: "ARTIST_DETAIL".localized,
                                preferredLargeTitle: true)

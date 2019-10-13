@@ -9,13 +9,13 @@
 import UIKit
 
 extension UIViewController {
-    func configureNavigationBar(largeTitleColor: UIColor, backgoundColor: UIColor, tintColor: UIColor, title: String, preferredLargeTitle: Bool) {
+    func configureNavigationBar(largeTitleColor: UIColor, backgroundColor: UIColor, tintColor: UIColor, title: String, preferredLargeTitle: Bool) {
         if #available(iOS 13.0, *) {
             let navBarAppearance = UINavigationBarAppearance()
             navBarAppearance.configureWithOpaqueBackground()
             navBarAppearance.largeTitleTextAttributes = [.foregroundColor: largeTitleColor]
             navBarAppearance.titleTextAttributes = [.foregroundColor: largeTitleColor]
-            navBarAppearance.backgroundColor = backgoundColor
+            navBarAppearance.backgroundColor = backgroundColor
 
             navigationController?.navigationBar.standardAppearance = navBarAppearance
             navigationController?.navigationBar.compactAppearance = navBarAppearance
@@ -28,12 +28,14 @@ extension UIViewController {
 
         } else {
             // Fallback on earlier versions
-            navigationController?.navigationBar.barTintColor = backgoundColor
+            navigationController?.navigationBar.prefersLargeTitles = preferredLargeTitle
+            navigationController?.navigationBar.barTintColor = tintColor
             navigationController?.navigationBar.tintColor = tintColor
             navigationController?.navigationBar.isTranslucent = true
+            navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: largeTitleColor]
+            navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: largeTitleColor]
             navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
             navigationController?.navigationBar.shadowImage = UIImage()
-
             navigationItem.title = title
         }
     }
