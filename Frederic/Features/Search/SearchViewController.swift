@@ -58,6 +58,7 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
         super.viewDidLoad()
         self.title = "Frederic"
         setupNavigationBar()
+        setupSearchBar()
         setupTableView()
         setupLoadingView()
     }
@@ -71,12 +72,20 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.navigationBar.tintColor = .white
+    }
 
+    func setupSearchBar() {
         let search = UISearchController(searchResultsController: nil)
         search.searchResultsUpdater = self
+        search.obscuresBackgroundDuringPresentation = false
+
         search.searchBar.barStyle = .blackOpaque
         search.searchBar.placeholder = "Search for artists"
+        search.searchBar.autocapitalizationType = .none
+        search.searchBar.autocorrectionType = .no
+
         self.navigationItem.searchController = search
+        self.navigationItem.hidesSearchBarWhenScrolling = false
     }
 
     func setupTableView() {
