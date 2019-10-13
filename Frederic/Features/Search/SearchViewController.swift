@@ -58,12 +58,12 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Frederic"
+        self.title = "SEARCH_NAME".localized
         setupNavigationBar()
         setupSearchBar()
-        setupTableView()
         setupLoadingView()
         setupErrorView()
+        setupTableView()
     }
 
     // MARK: Setups
@@ -83,7 +83,7 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
         search.obscuresBackgroundDuringPresentation = false
 
         search.searchBar.barStyle = .blackOpaque
-        search.searchBar.placeholder = "Search for artists"
+        search.searchBar.placeholder = "SEARCH_BAR".localized
         search.searchBar.autocapitalizationType = .none
         search.searchBar.autocorrectionType = .no
 
@@ -95,6 +95,8 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.register(UINib(nibName: ArtistCell.nibName, bundle: Bundle.main), forCellReuseIdentifier: ArtistCell.reuseIdentifier)
+        self.tableView.tableFooterView = self.emptyView
+        self.emptyView?.startAnimation()
     }
 
     func setupLoadingView() {
@@ -159,6 +161,8 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
 
     func displayEmptyState() {
         DispatchQueue.main.async { [weak self] in
+            self?.emptyView?.setEmptyMessage("NO_RESULTS".localized)
+            self?.emptyView?.startAnimation()
             self?.tableView.tableFooterView = self?.emptyView
         }
     }
@@ -166,6 +170,7 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     func hideEmptyState() {
         DispatchQueue.main.async { [weak self] in
             self?.tableView.tableFooterView = nil
+            self?.emptyView?.stopAnimation()
         }
     }
 

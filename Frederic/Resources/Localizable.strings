@@ -13,3 +13,8 @@ NO_NETWORK = "The network connection is lost.";
 TIME_OUT = "We didn't anticipate this taking so long";
 UNKNOWN = "Oops! Something is broken.";
 RETRY = "Try again";
+NO_RESULTS = "No results found!";
+
+//Features
+SEARCH_NAME = "Frederic";
+SEARCH_BAR = "Search for artists":

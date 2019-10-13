@@ -14,6 +14,7 @@ class EmptyView: UIView {
     private var contentView: UIView?
     private let musicAnimation = AnimationView(name: "music")
     @IBOutlet private weak var musicView: AnimationView!
+    @IBOutlet private weak var emptyLabel: UILabel!
 
     // MARK: - Init
     override init(frame: CGRect) {
@@ -37,12 +38,24 @@ class EmptyView: UIView {
         buildAnimation()
     }
 
+    func setEmptyMessage(_ text: String) {
+        emptyLabel.text = text
+    }
+
     private func buildAnimation() {
         musicAnimation.contentMode = .scaleAspectFill
         self.musicView.addSubview(musicAnimation)
         musicAnimation.updateConstraints()
         musicAnimation.frame = self.musicView.bounds
         musicAnimation.loopMode = .loop
+
+    }
+
+    func startAnimation() {
         musicAnimation.play()
+    }
+
+    func stopAnimation () {
+        musicAnimation.stop()
     }
 }
