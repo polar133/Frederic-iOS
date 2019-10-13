@@ -14,6 +14,7 @@ protocol SearchDisplayLogic: class {
     func hideLoading()
     func displayError(message: String)
     func displayEmptyState()
+    func hideEmptyState()
     func goToArtistDetail()
 }
 
@@ -23,6 +24,7 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     var router: (NSObjectProtocol & SearchRoutingLogic & SearchDataPassing)?
     var viewModels: [Search.Artists.ViewModel] = []
     var loadingView: LoadingView?
+    var emptyView: EmptyView?
     var errorIsPresented = false
 
     // MARK: IBOutlets
@@ -61,6 +63,7 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
         setupSearchBar()
         setupTableView()
         setupLoadingView()
+        setupErrorView()
     }
 
     // MARK: Setups
@@ -96,6 +99,10 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
 
     func setupLoadingView() {
         loadingView = LoadingView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: LoadingView.height))
+    }
+
+    func setupErrorView() {
+        emptyView = EmptyView(frame: CGRect(x: 0, y: 0, width: self.tableView.bounds.width, height: self.tableView.bounds.height - 84))
     }
 
     // MARK: Search
@@ -151,6 +158,15 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     }
 
     func displayEmptyState() {
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.tableFooterView = self?.emptyView
+        }
+    }
+
+    func hideEmptyState() {
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.tableFooterView = nil
+        }
     }
 
     func goToArtistDetail() {

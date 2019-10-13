@@ -25,8 +25,9 @@ class SearchPresenter: SearchPresentationLogic {
         if viewModels.isEmpty {
             self.viewController?.displayEmptyState()
         } else {
-            self.viewController?.displayArtists(viewModels: viewModels)
+            self.viewController?.hideEmptyState()
         }
+        self.viewController?.displayArtists(viewModels: viewModels)
     }
 
     func presentErrorResult(message: String) {

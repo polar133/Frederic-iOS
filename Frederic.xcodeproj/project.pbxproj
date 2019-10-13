@@ -13,6 +13,9 @@
 		F37686ED235367F600C6BF39 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = F37686EC235367F600C6BF39 /* loading.json */; };
 		F37686EF2353848000C6BF39 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37686EE2353848000C6BF39 /* String+Extension.swift */; };
 		F37686F1235384B100C6BF39 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F37686F0235384B100C6BF39 /* Localizable.strings */; };
+		F37686F72353877D00C6BF39 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37686F62353877D00C6BF39 /* EmptyView.swift */; };
+		F37686F92353878400C6BF39 /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F37686F82353878400C6BF39 /* EmptyView.xib */; };
+		F37686FB23538C0200C6BF39 /* music.json in Resources */ = {isa = PBXBuildFile; fileRef = F37686FA23538C0200C6BF39 /* music.json */; };
 		F39A62FA2351489600E28C58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A62F92351489600E28C58 /* AppDelegate.swift */; };
 		F39A63032351489A00E28C58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F39A63022351489A00E28C58 /* Assets.xcassets */; };
 		F39A63062351489A00E28C58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F39A63042351489A00E28C58 /* LaunchScreen.storyboard */; };
@@ -63,6 +66,9 @@
 		F37686EC235367F600C6BF39 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		F37686EE2353848000C6BF39 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		F37686F0235384B100C6BF39 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		F37686F62353877D00C6BF39 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		F37686F82353878400C6BF39 /* EmptyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
+		F37686FA23538C0200C6BF39 /* music.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = music.json; sourceTree = "<group>"; };
 		F39A62F62351489600E28C58 /* Frederic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Frederic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F39A62F92351489600E28C58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F39A63022351489A00E28C58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -194,6 +200,8 @@
 				F39A634F235250E400E28C58 /* ArtistCell.xib */,
 				F37686E82353663900C6BF39 /* LoadingView.swift */,
 				F37686EA2353664100C6BF39 /* LoadingView.xib */,
+				F37686F62353877D00C6BF39 /* EmptyView.swift */,
+				F37686F82353878400C6BF39 /* EmptyView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -230,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				F37686EC235367F600C6BF39 /* loading.json */,
+				F37686FA23538C0200C6BF39 /* music.json */,
 				F39A63022351489A00E28C58 /* Assets.xcassets */,
 				F39A63042351489A00E28C58 /* LaunchScreen.storyboard */,
 				F37686F0235384B100C6BF39 /* Localizable.strings */,
@@ -384,9 +393,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F39A6351235250E400E28C58 /* ArtistCell.xib in Resources */,
+				F37686FB23538C0200C6BF39 /* music.json in Resources */,
 				F39A63062351489A00E28C58 /* LaunchScreen.storyboard in Resources */,
 				F37686ED235367F600C6BF39 /* loading.json in Resources */,
 				F39A634B23522F9400E28C58 /* API.plist in Resources */,
+				F37686F92353878400C6BF39 /* EmptyView.xib in Resources */,
 				F37686F1235384B100C6BF39 /* Localizable.strings in Resources */,
 				F39A63032351489A00E28C58 /* Assets.xcassets in Resources */,
 				F37686EB2353664100C6BF39 /* LoadingView.xib in Resources */,
@@ -451,6 +462,7 @@
 				F39A634123521AB000E28C58 /* Result.swift in Sources */,
 				F39A635923528B5A00E28C58 /* ArtistDetailPresenter.swift in Sources */,
 				F37686E92353663A00C6BF39 /* LoadingView.swift in Sources */,
+				F37686F72353877D00C6BF39 /* EmptyView.swift in Sources */,
 				F39A632B2351602500E28C58 /* SearchInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

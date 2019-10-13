@@ -67,7 +67,7 @@ class SearchPresenterTests: XCTestCase {
 
         // Then
         XCTAssertTrue(spy.displayEmptyStateCalled)
-        XCTAssertFalse(spy.displayArtistsCalled)
+        XCTAssertTrue(spy.displayArtistsCalled)
     }
 
     func testPresentLoading() {
@@ -108,12 +108,14 @@ class SearchPresenterTests: XCTestCase {
 }
 
 class SearchDisplayLogicSpy: SearchDisplayLogic {
+
     var displayArtistsCalled = false
     var displayLoadingCalled = false
     var hideLoadingCalled = false
     var displayEmptyStateCalled = false
     var displayErrorCalled = false
     var goToArtistDetailCalled = false
+    var hideEmptyStateCalled = false
 
     func displayArtists(viewModels: [Search.Artists.ViewModel]) {
         displayArtistsCalled = true
@@ -133,6 +135,10 @@ class SearchDisplayLogicSpy: SearchDisplayLogic {
 
     func displayEmptyState() {
         displayEmptyStateCalled = true
+    }
+
+    func hideEmptyState() {
+        hideEmptyStateCalled = true
     }
 
     func goToArtistDetail() {
