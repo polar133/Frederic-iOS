@@ -18,6 +18,7 @@ enum ArtistDetail {
             let artist: Artist
         }
         struct ViewModel {
+            let id: Int
             let name: String
         }
     }
