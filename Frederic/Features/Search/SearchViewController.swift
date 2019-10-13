@@ -13,6 +13,7 @@ protocol SearchDisplayLogic: class {
     func displayLoading()
     func hideLoading()
     func displayError()
+    func hideError()
     func displayEmptyState()
     func goToArtistDetail()
 }
@@ -22,7 +23,7 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     var interactor: SearchBusinessLogic?
     var router: (NSObjectProtocol & SearchRoutingLogic & SearchDataPassing)?
     var viewModels: [Search.Artists.ViewModel] = []
-    var loadingView: LoadingView!
+    var loadingView: LoadingView?
 
     // MARK: IBOutlets
     @IBOutlet private weak var tableView: UITableView!
@@ -64,9 +65,16 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     // MARK: Setups
     func setupNavigationBar() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.tintColor = .white
+
         let search = UISearchController(searchResultsController: nil)
         search.searchResultsUpdater = self
+        search.searchBar.barStyle = .blackOpaque
         search.searchBar.placeholder = "Search for artists"
         self.navigationItem.searchController = search
     }
@@ -90,20 +98,6 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
 
     // MARK: SearchDisplayLogic Functions
 
-    func displayLoading() {
-        DispatchQueue.main.async { [weak self] in
-            self?.loadingView.startLoading()
-            self?.tableView.tableHeaderView = self?.loadingView
-        }
-    }
-
-    func hideLoading() {
-        DispatchQueue.main.async { [weak self] in
-            self?.tableView.tableHeaderView = nil
-            self?.loadingView.stopLoading()
-        }
-    }
-
     func displayArtists(viewModels: [Search.Artists.ViewModel]) {
         self.viewModels = viewModels
         DispatchQueue.main.async { [weak self] in
@@ -111,7 +105,24 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
         }
     }
 
+    func displayLoading() {
+        DispatchQueue.main.async { [weak self] in
+            self?.loadingView?.startLoading()
+            self?.tableView.tableHeaderView = self?.loadingView
+        }
+    }
+
+    func hideLoading() {
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.tableHeaderView = nil
+            self?.loadingView?.stopLoading()
+        }
+    }
+
     func displayError() {
+    }
+
+    func hideError() {
     }
 
     func displayEmptyState() {

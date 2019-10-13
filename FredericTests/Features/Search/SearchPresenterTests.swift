@@ -113,6 +113,7 @@ class SearchDisplayLogicSpy: SearchDisplayLogic {
     var hideLoadingCalled = false
     var displayEmptyStateCalled = false
     var displayErrorCalled = false
+    var hideErrorCalled = false
     var goToArtistDetailCalled = false
 
     func displayArtists(viewModels: [Search.Artists.ViewModel]) {
@@ -129,6 +130,10 @@ class SearchDisplayLogicSpy: SearchDisplayLogic {
 
     func displayError() {
         displayErrorCalled = true
+    }
+
+    func hideError() {
+        hideErrorCalled = true
     }
 
     func displayEmptyState() {
