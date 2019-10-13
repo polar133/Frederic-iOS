@@ -38,6 +38,7 @@
 		F39A636723528C3800E28C58 /* ArtistDetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A636323528C3800E28C58 /* ArtistDetailPresenterTests.swift */; };
 		F39A63692352906700E28C58 /* ArtistDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A63682352906700E28C58 /* ArtistDetailRouter.swift */; };
 		F39A636B235291AE00E28C58 /* ArtistDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F39A636A235291AE00E28C58 /* ArtistDetailViewController.xib */; };
+		F39A636E2352BAED00E28C58 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A636D2352BAED00E28C58 /* UIImageView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		F39A636323528C3800E28C58 /* ArtistDetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailPresenterTests.swift; sourceTree = "<group>"; };
 		F39A63682352906700E28C58 /* ArtistDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailRouter.swift; sourceTree = "<group>"; };
 		F39A636A235291AE00E28C58 /* ArtistDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistDetailViewController.xib; sourceTree = "<group>"; };
+		F39A636D2352BAED00E28C58 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		F39A62F82351489600E28C58 /* Frederic */ = {
 			isa = PBXGroup;
 			children = (
+				F39A636C2352BAD300E28C58 /* Extensions */,
 				F39A634223521C0700E28C58 /* Models */,
 				F39A633F235219F600E28C58 /* Networking */,
 				F39A633E235219D800E28C58 /* Resources */,
@@ -265,6 +268,14 @@
 				F39A636323528C3800E28C58 /* ArtistDetailPresenterTests.swift */,
 			);
 			path = ArtistDetail;
+			sourceTree = "<group>";
+		};
+		F39A636C2352BAD300E28C58 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F39A636D2352BAED00E28C58 /* UIImageView+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,6 +418,7 @@
 				F39A635E23528B5A00E28C58 /* ArtistDetailInteractor.swift in Sources */,
 				F39A62FA2351489600E28C58 /* AppDelegate.swift in Sources */,
 				F39A63272351602500E28C58 /* SearchWorker.swift in Sources */,
+				F39A636E2352BAED00E28C58 /* UIImageView+Extension.swift in Sources */,
 				F39A634D2352332600E28C58 /* FredericError.swift in Sources */,
 				F39A63292351602500E28C58 /* SearchModels.swift in Sources */,
 				F39A634123521AB000E28C58 /* Result.swift in Sources */,

@@ -20,13 +20,25 @@ class ArtistCell: UITableViewCell {
     }
 
     @IBOutlet private weak var artistLabel: UILabel!
+    @IBOutlet private weak var artistImage: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         self.selectionStyle = .none
+        self.artistImage.layer.cornerRadius = self.artistImage.frame.size.width / 2
+        self.artistImage.clipsToBounds = true
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.artistImage.image = nil
     }
 
     func loadArtist(viewModel: Search.Artists.ViewModel) {
         self.artistLabel.text = viewModel.name
+        guard let url = FredericAPI.imageURL(id: viewModel.id) else {
+            return
+        }
+        self.artistImage.load(url: url)
     }
 }

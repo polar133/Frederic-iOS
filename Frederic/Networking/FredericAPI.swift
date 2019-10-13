@@ -43,4 +43,9 @@ enum FredericAPI {
         return "\(baseURL)/\(version)/\(path)/\(endpoint)"
     }
 
+    static func imageURL(id: Int) -> URL? {
+        let image = configurationValueForKeyAndSubKey(key: "image", subKey: "", baseConfigurationDictionary: baseConfigurationDictionary)
+        let endpoint = image.replacingOccurrences(of: "ID", with: "\(id)")
+        return URL(string: endpoint)
+    }
 }

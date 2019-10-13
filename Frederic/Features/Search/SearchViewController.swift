@@ -131,7 +131,7 @@ extension SearchViewController: UISearchResultsUpdating {
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 44
+        return 66
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
