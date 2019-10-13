@@ -93,13 +93,13 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     func displayLoading() {
         DispatchQueue.main.async { [weak self] in
             self?.loadingView.startLoading()
-            self?.tableView.tableFooterView = self?.loadingView
+            self?.tableView.tableHeaderView = self?.loadingView
         }
     }
 
     func hideLoading() {
         DispatchQueue.main.async { [weak self] in
-            self?.tableView.tableFooterView = nil
+            self?.tableView.tableHeaderView = nil
             self?.loadingView.stopLoading()
         }
     }
