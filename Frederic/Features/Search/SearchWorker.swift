@@ -11,6 +11,7 @@ import Foundation
 class SearchWorker {
 
     private let urlSession: URLSession
+    private var task: URLSessionTask?
 
     init(urlSession: URLSession = URLSession.shared) {
         self.urlSession = urlSession
@@ -32,9 +33,15 @@ class SearchWorker {
             callback(.failure(FredericError.invalidURL))
             return
         }
-        urlSession.invalidateAndCancel()
-        urlSession.dataTask(with: urlRequest, completionHandler: { data, response, error in
+        task?.cancel()
+        task = urlSession.dataTask(with: urlRequest, completionHandler: { data, response, error in
             let response = response as? HTTPURLResponse
+            if let error = error {
+                // if task was cancelled, don't trigger an failure callback
+                guard (error as NSError).code != NSURLErrorCancelled else {
+                    return
+                }
+            }
             if let data = data, let response = response, (200..<299).contains(response.statusCode) {
                 do {
                     let value = try JSONDecoder().decode(ArtistsResponse.self, from: data)
@@ -45,6 +52,7 @@ class SearchWorker {
             } else {
                 callback(.failure(FredericError.from(response?.statusCode, error: error, content: data)))
             }
-        }).resume()
+        })
+        task?.resume()
     }
 }

@@ -12,7 +12,7 @@ protocol SearchPresentationLogic {
     func presentSearchResult(response: Search.Artists.Response)
     func presentLoading()
     func dismissLoading()
-    func presentErrorResult()
+    func presentErrorResult(message: String)
     func presentArtistDetail()
 }
 
@@ -25,12 +25,13 @@ class SearchPresenter: SearchPresentationLogic {
         if viewModels.isEmpty {
             self.viewController?.displayEmptyState()
         } else {
-            self.viewController?.displayArtists(viewModels: viewModels)
+            self.viewController?.hideEmptyState()
         }
+        self.viewController?.displayArtists(viewModels: viewModels)
     }
 
-    func presentErrorResult() {
-        self.viewController?.displayError()
+    func presentErrorResult(message: String) {
+        self.viewController?.displayError(message: message)
     }
 
     func presentLoading() {

@@ -3,10 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F37686E723535FDE00C6BF39 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = F37686E623535FDE00C6BF39 /* Lottie */; };
+		F37686E92353663A00C6BF39 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37686E82353663900C6BF39 /* LoadingView.swift */; };
+		F37686EB2353664100C6BF39 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F37686EA2353664100C6BF39 /* LoadingView.xib */; };
+		F37686ED235367F600C6BF39 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = F37686EC235367F600C6BF39 /* loading.json */; };
+		F37686EF2353848000C6BF39 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37686EE2353848000C6BF39 /* String+Extension.swift */; };
+		F37686F1235384B100C6BF39 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F37686F0235384B100C6BF39 /* Localizable.strings */; };
+		F37686F72353877D00C6BF39 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37686F62353877D00C6BF39 /* EmptyView.swift */; };
+		F37686F92353878400C6BF39 /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F37686F82353878400C6BF39 /* EmptyView.xib */; };
+		F37686FB23538C0200C6BF39 /* music.json in Resources */ = {isa = PBXBuildFile; fileRef = F37686FA23538C0200C6BF39 /* music.json */; };
 		F39A62FA2351489600E28C58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A62F92351489600E28C58 /* AppDelegate.swift */; };
 		F39A63032351489A00E28C58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F39A63022351489A00E28C58 /* Assets.xcassets */; };
 		F39A63062351489A00E28C58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F39A63042351489A00E28C58 /* LaunchScreen.storyboard */; };
@@ -38,6 +47,7 @@
 		F39A636723528C3800E28C58 /* ArtistDetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A636323528C3800E28C58 /* ArtistDetailPresenterTests.swift */; };
 		F39A63692352906700E28C58 /* ArtistDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A63682352906700E28C58 /* ArtistDetailRouter.swift */; };
 		F39A636B235291AE00E28C58 /* ArtistDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F39A636A235291AE00E28C58 /* ArtistDetailViewController.xib */; };
+		F39A636E2352BAED00E28C58 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A636D2352BAED00E28C58 /* UIImageView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +61,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F37686E82353663900C6BF39 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		F37686EA2353664100C6BF39 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		F37686EC235367F600C6BF39 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		F37686EE2353848000C6BF39 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		F37686F0235384B100C6BF39 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		F37686F62353877D00C6BF39 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		F37686F82353878400C6BF39 /* EmptyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
+		F37686FA23538C0200C6BF39 /* music.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = music.json; sourceTree = "<group>"; };
 		F39A62F62351489600E28C58 /* Frederic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Frederic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F39A62F92351489600E28C58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F39A63022351489A00E28C58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,6 +104,7 @@
 		F39A636323528C3800E28C58 /* ArtistDetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailPresenterTests.swift; sourceTree = "<group>"; };
 		F39A63682352906700E28C58 /* ArtistDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailRouter.swift; sourceTree = "<group>"; };
 		F39A636A235291AE00E28C58 /* ArtistDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistDetailViewController.xib; sourceTree = "<group>"; };
+		F39A636D2352BAED00E28C58 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F37686E723535FDE00C6BF39 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +147,7 @@
 		F39A62F82351489600E28C58 /* Frederic */ = {
 			isa = PBXGroup;
 			children = (
+				F39A636C2352BAD300E28C58 /* Extensions */,
 				F39A634223521C0700E28C58 /* Models */,
 				F39A633F235219F600E28C58 /* Networking */,
 				F39A633E235219D800E28C58 /* Resources */,
@@ -177,6 +198,10 @@
 			children = (
 				F39A634E235250E400E28C58 /* ArtistCell.swift */,
 				F39A634F235250E400E28C58 /* ArtistCell.xib */,
+				F37686E82353663900C6BF39 /* LoadingView.swift */,
+				F37686EA2353664100C6BF39 /* LoadingView.xib */,
+				F37686F62353877D00C6BF39 /* EmptyView.swift */,
+				F37686F82353878400C6BF39 /* EmptyView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -212,8 +237,11 @@
 		F39A633E235219D800E28C58 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F37686EC235367F600C6BF39 /* loading.json */,
+				F37686FA23538C0200C6BF39 /* music.json */,
 				F39A63022351489A00E28C58 /* Assets.xcassets */,
 				F39A63042351489A00E28C58 /* LaunchScreen.storyboard */,
+				F37686F0235384B100C6BF39 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -267,6 +295,15 @@
 			path = ArtistDetail;
 			sourceTree = "<group>";
 		};
+		F39A636C2352BAD300E28C58 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F39A636D2352BAED00E28C58 /* UIImageView+Extension.swift */,
+				F37686EE2353848000C6BF39 /* String+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -284,6 +321,9 @@
 			dependencies = (
 			);
 			name = Frederic;
+			packageProductDependencies = (
+				F37686E623535FDE00C6BF39 /* Lottie */,
+			);
 			productName = Frederic;
 			productReference = F39A62F62351489600E28C58 /* Frederic.app */;
 			productType = "com.apple.product-type.application";
@@ -334,6 +374,9 @@
 				Base,
 			);
 			mainGroup = F39A62ED2351489600E28C58;
+			packageReferences = (
+				F37686E523535FDE00C6BF39 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = F39A62F72351489600E28C58 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -350,9 +393,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F39A6351235250E400E28C58 /* ArtistCell.xib in Resources */,
+				F37686FB23538C0200C6BF39 /* music.json in Resources */,
 				F39A63062351489A00E28C58 /* LaunchScreen.storyboard in Resources */,
+				F37686ED235367F600C6BF39 /* loading.json in Resources */,
 				F39A634B23522F9400E28C58 /* API.plist in Resources */,
+				F37686F92353878400C6BF39 /* EmptyView.xib in Resources */,
+				F37686F1235384B100C6BF39 /* Localizable.strings in Resources */,
 				F39A63032351489A00E28C58 /* Assets.xcassets in Resources */,
+				F37686EB2353664100C6BF39 /* LoadingView.xib in Resources */,
 				F39A636B235291AE00E28C58 /* ArtistDetailViewController.xib in Resources */,
 				F39A632E235160EB00E28C58 /* SearchViewController.xib in Resources */,
 			);
@@ -403,14 +451,18 @@
 				F39A63282351602500E28C58 /* SearchRouter.swift in Sources */,
 				F39A635D23528B5A00E28C58 /* ArtistDetailViewController.swift in Sources */,
 				F39A63262351602500E28C58 /* SearchPresenter.swift in Sources */,
+				F37686EF2353848000C6BF39 /* String+Extension.swift in Sources */,
 				F39A634423521C2000E28C58 /* Artist.swift in Sources */,
 				F39A635E23528B5A00E28C58 /* ArtistDetailInteractor.swift in Sources */,
 				F39A62FA2351489600E28C58 /* AppDelegate.swift in Sources */,
 				F39A63272351602500E28C58 /* SearchWorker.swift in Sources */,
+				F39A636E2352BAED00E28C58 /* UIImageView+Extension.swift in Sources */,
 				F39A634D2352332600E28C58 /* FredericError.swift in Sources */,
 				F39A63292351602500E28C58 /* SearchModels.swift in Sources */,
 				F39A634123521AB000E28C58 /* Result.swift in Sources */,
 				F39A635923528B5A00E28C58 /* ArtistDetailPresenter.swift in Sources */,
+				F37686E92353663A00C6BF39 /* LoadingView.swift in Sources */,
+				F37686F72353877D00C6BF39 /* EmptyView.swift in Sources */,
 				F39A632B2351602500E28C58 /* SearchInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -671,6 +723,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F37686E523535FDE00C6BF39 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F37686E623535FDE00C6BF39 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F37686E523535FDE00C6BF39 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F39A62EE2351489600E28C58 /* Project object */;
 }

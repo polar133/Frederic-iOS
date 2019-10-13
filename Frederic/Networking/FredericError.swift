@@ -23,6 +23,28 @@ enum FredericError: Error {
     case unknown
 }
 
+extension FredericError: CustomStringConvertible {
+
+    public var localizedDescription: String {
+        switch self {
+        case .invalidURL:
+            return "INVALID_URL".localized
+        case .responseSerialization:
+            return "INVALID_RESPONSE".localized
+        case .noInternetConection:
+            return "NO_NETWORK".localized
+        case .requestTimeOut:
+            return "TIME_OUT".localized
+        case .unknown:
+            return "UNKNOWN".localized
+        }
+    }
+
+    public var description: String {
+        return localizedDescription
+    }
+}
+
 extension FredericError: Equatable {
 
     // Transform an underlying request error into  `XSError`

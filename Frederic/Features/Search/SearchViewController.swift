@@ -12,8 +12,9 @@ protocol SearchDisplayLogic: class {
     func displayArtists(viewModels: [Search.Artists.ViewModel])
     func displayLoading()
     func hideLoading()
-    func displayError()
+    func displayError(message: String)
     func displayEmptyState()
+    func hideEmptyState()
     func goToArtistDetail()
 }
 
@@ -22,6 +23,9 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     var interactor: SearchBusinessLogic?
     var router: (NSObjectProtocol & SearchRoutingLogic & SearchDataPassing)?
     var viewModels: [Search.Artists.ViewModel] = []
+    var loadingView: LoadingView?
+    var emptyView: EmptyView?
+    var errorIsPresented = false
 
     // MARK: IBOutlets
     @IBOutlet private weak var tableView: UITableView!
@@ -54,25 +58,53 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
     // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Frederic"
+        self.title = "SEARCH_NAME".localized
         setupNavigationBar()
+        setupSearchBar()
+        setupLoadingView()
+        setupErrorView()
         setupTableView()
     }
 
     // MARK: Setups
     func setupNavigationBar() {
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.green]
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.tintColor = .white
+    }
+
+    func setupSearchBar() {
         let search = UISearchController(searchResultsController: nil)
         search.searchResultsUpdater = self
-        search.searchBar.placeholder = "Search for artists"
+        search.obscuresBackgroundDuringPresentation = false
+
+        search.searchBar.barStyle = .blackOpaque
+        search.searchBar.placeholder = "SEARCH_BAR".localized
+        search.searchBar.autocapitalizationType = .none
+        search.searchBar.autocorrectionType = .no
+
         self.navigationItem.searchController = search
+        self.navigationItem.hidesSearchBarWhenScrolling = false
     }
 
     func setupTableView() {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.register(UINib(nibName: ArtistCell.nibName, bundle: Bundle.main), forCellReuseIdentifier: ArtistCell.reuseIdentifier)
+        self.tableView.tableFooterView = self.emptyView
+        self.emptyView?.startAnimation()
+    }
+
+    func setupLoadingView() {
+        loadingView = LoadingView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: LoadingView.height))
+    }
+
+    func setupErrorView() {
+        emptyView = EmptyView(frame: CGRect(x: 0, y: 0, width: self.tableView.bounds.width, height: self.tableView.bounds.height - 84))
     }
 
     // MARK: Search
@@ -84,18 +116,6 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
 
     // MARK: SearchDisplayLogic Functions
 
-    func displayLoading() {
-        DispatchQueue.main.async {
-             UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        }
-    }
-
-    func hideLoading() {
-        DispatchQueue.main.async {
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
-        }
-    }
-
     func displayArtists(viewModels: [Search.Artists.ViewModel]) {
         self.viewModels = viewModels
         DispatchQueue.main.async { [weak self] in
@@ -103,10 +123,55 @@ class SearchViewController: UIViewController, SearchDisplayLogic {
         }
     }
 
-    func displayError() {
+    func displayLoading() {
+        DispatchQueue.main.async { [weak self] in
+            self?.loadingView?.startLoading()
+            self?.tableView.tableHeaderView = self?.loadingView
+        }
+    }
+
+    func hideLoading() {
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.tableHeaderView = nil
+            self?.loadingView?.stopLoading()
+        }
+    }
+
+    // Note: Will trigger a layout contraint warning
+    /// There is a openradar about this issue  https://openradar.appspot.com/49289931
+    func displayError(message: String) {
+        guard !errorIsPresented else {
+            return
+        }
+        errorIsPresented = true
+        DispatchQueue.main.async { [weak self] in
+            let alert = UIAlertController(title: nil, message: message, preferredStyle: .actionSheet)
+            alert.view.backgroundColor = UIColor.black
+            alert.view.alpha = 0.6
+            alert.view.layer.cornerRadius = 15
+
+            self?.present(alert, animated: true)
+
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2.0) {
+                alert.dismiss(animated: true)
+                self?.errorIsPresented = false
+            }
+        }
     }
 
     func displayEmptyState() {
+        DispatchQueue.main.async { [weak self] in
+            self?.emptyView?.setEmptyMessage("NO_RESULTS".localized)
+            self?.emptyView?.startAnimation()
+            self?.tableView.tableFooterView = self?.emptyView
+        }
+    }
+
+    func hideEmptyState() {
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.tableFooterView = nil
+            self?.emptyView?.stopAnimation()
+        }
     }
 
     func goToArtistDetail() {
@@ -131,7 +196,7 @@ extension SearchViewController: UISearchResultsUpdating {
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 44
+        return 66
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
