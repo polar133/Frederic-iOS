@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ArtistDetailDisplayLogic: class {
-    func displaySomething(viewModel: ArtistDetail.Something.ViewModel)
+    func displayArtist(viewModel: ArtistDetail.Profile.ViewModel)
 }
 
 class ArtistDetailViewController: UIViewController, ArtistDetailDisplayLogic {
@@ -16,6 +16,7 @@ class ArtistDetailViewController: UIViewController, ArtistDetailDisplayLogic {
     var router: (NSObjectProtocol & ArtistDetailRoutingLogic & ArtistDetailDataPassing)?
 
     // MARK: Object lifecycle
+    @IBOutlet private weak var artistNameLabel: UILabel!
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -46,19 +47,19 @@ class ArtistDetailViewController: UIViewController, ArtistDetailDisplayLogic {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        doSomething()
+        loadArtist()
     }
 
     // MARK: Do something
 
     //@IBOutlet weak var nameTextField: UITextField!
 
-    func doSomething() {
-        let request = ArtistDetail.Something.Request()
-        interactor?.doSomething(request: request)
+    func loadArtist() {
+        let request = ArtistDetail.Profile.Request()
+        interactor?.getArtist(request: request)
     }
 
-    func displaySomething(viewModel: ArtistDetail.Something.ViewModel) {
-        //nameTextField.text = viewModel.name
+    func displayArtist(viewModel: ArtistDetail.Profile.ViewModel) {
+        artistNameLabel.text = viewModel.name
     }
 }

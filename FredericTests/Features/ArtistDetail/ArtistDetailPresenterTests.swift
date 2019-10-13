@@ -11,49 +11,56 @@ import XCTest
 
 // swiftlint:disable all
 class ArtistDetailPresenterTests: XCTestCase {
-  // MARK: Subject under test
+    // MARK: Subject under test
 
-  var sut: ArtistDetailPresenter!
+    var sut: ArtistDetailPresenter!
+    var artist: Artist!
+    
+    // MARK: Test lifecycle
 
-  // MARK: Test lifecycle
-
-  override func setUp() {
-    super.setUp()
-    setupArtistDetailPresenter()
-  }
-
-  override func tearDown() {
-    super.tearDown()
-  }
-
-  // MARK: Test setup
-
-  func setupArtistDetailPresenter() {
-    sut = ArtistDetailPresenter()
-  }
-
-  // MARK: Test doubles
-
-  class ArtistDetailDisplayLogicSpy: ArtistDetailDisplayLogic {
-    var displaySomethingCalled = false
-
-    func displaySomething(viewModel: ArtistDetail.Something.ViewModel) {
-      displaySomethingCalled = true
+    override func setUp() {
+        super.setUp()
+        setupArtistDetailPresenter()
     }
-  }
 
-  // MARK: Tests
+    override func tearDown() {
+        super.tearDown()
+    }
 
-  func testPresentSomething() {
-    // Given
-    let spy = ArtistDetailDisplayLogicSpy()
-    sut.viewController = spy
-    let response = ArtistDetail.Something.Response()
+    // MARK: Test setup
 
-    // When
-    sut.presentSomething(response: response)
+    func setupArtistDetailPresenter() {
+        sut = ArtistDetailPresenter()
+        artist = Artist(id: 123,
+                        forename: "Frédéric",
+                        surname: "Chopin",
+                        name: "Frédéric Chopin",
+                        functions: ["Composer"],
+                        popularity: 5.0,
+                        score: 5.0,
+                        kind: nil)
+    }
 
-    // Then
-    XCTAssertTrue(spy.displaySomethingCalled, "presentSomething(response:) should ask the view controller to display the result")
-  }
+    // MARK: Tests
+
+    func testPresentSomething() {
+        // Given
+        let spy = ArtistDetailDisplayLogicSpy()
+        sut.viewController = spy
+        let response = ArtistDetail.Profile.Response(artist: self.artist)
+
+        // When
+        sut.presentArtist(response: response)
+
+        // Then
+        XCTAssertTrue(spy.displayArtistCalled)
+    }
+}
+
+class ArtistDetailDisplayLogicSpy: ArtistDetailDisplayLogic {
+    var displayArtistCalled = false
+
+    func displayArtist(viewModel: ArtistDetail.Profile.ViewModel) {
+        displayArtistCalled = true
+    }
 }

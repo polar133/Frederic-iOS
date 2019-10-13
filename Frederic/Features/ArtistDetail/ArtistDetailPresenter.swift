@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ArtistDetailPresentationLogic {
-    func presentSomething(response: ArtistDetail.Something.Response)
+    func presentArtist(response: ArtistDetail.Profile.Response)
 }
 
 class ArtistDetailPresenter: ArtistDetailPresentationLogic {
@@ -17,8 +17,8 @@ class ArtistDetailPresenter: ArtistDetailPresentationLogic {
 
     // MARK: Do something
 
-    func presentSomething(response: ArtistDetail.Something.Response) {
-        let viewModel = ArtistDetail.Something.ViewModel()
-        viewController?.displaySomething(viewModel: viewModel)
+    func presentArtist(response: ArtistDetail.Profile.Response) {
+        let viewModel = ArtistDetail.Profile.ViewModel(name: response.artist.name)
+        viewController?.displayArtist(viewModel: viewModel)
     }
 }

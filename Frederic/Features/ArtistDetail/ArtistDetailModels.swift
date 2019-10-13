@@ -11,12 +11,14 @@ import UIKit
 enum ArtistDetail {
     // MARK: Use cases
 
-    enum Something {
+    enum Profile {
         struct Request {
         }
         struct Response {
+            let artist: Artist
         }
         struct ViewModel {
+            let name: String
         }
     }
 }

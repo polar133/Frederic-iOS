@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ArtistDetailBusinessLogic {
-    func doSomething(request: ArtistDetail.Something.Request)
+    func getArtist(request: ArtistDetail.Profile.Request)
 }
 
 protocol ArtistDetailDataStore {
@@ -22,8 +22,11 @@ class ArtistDetailInteractor: ArtistDetailBusinessLogic, ArtistDetailDataStore {
 
     // MARK: Do something
 
-    func doSomething(request: ArtistDetail.Something.Request) {
-        let response = ArtistDetail.Something.Response()
-        presenter?.presentSomething(response: response)
+    func getArtist(request: ArtistDetail.Profile.Request) {
+        guard let artist = self.artist else {
+            return
+        }
+        let response = ArtistDetail.Profile.Response(artist: artist)
+        presenter?.presentArtist(response: response)
     }
 }
