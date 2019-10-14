@@ -16,6 +16,7 @@
 		F37686F72353877D00C6BF39 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37686F62353877D00C6BF39 /* EmptyView.swift */; };
 		F37686F92353878400C6BF39 /* EmptyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F37686F82353878400C6BF39 /* EmptyView.xib */; };
 		F37686FB23538C0200C6BF39 /* music.json in Resources */ = {isa = PBXBuildFile; fileRef = F37686FA23538C0200C6BF39 /* music.json */; };
+		F37687012353A43400C6BF39 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37687002353A43400C6BF39 /* UIViewController+Extension.swift */; };
 		F39A62FA2351489600E28C58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39A62F92351489600E28C58 /* AppDelegate.swift */; };
 		F39A63032351489A00E28C58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F39A63022351489A00E28C58 /* Assets.xcassets */; };
 		F39A63062351489A00E28C58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F39A63042351489A00E28C58 /* LaunchScreen.storyboard */; };
@@ -69,6 +70,7 @@
 		F37686F62353877D00C6BF39 /* EmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
 		F37686F82353878400C6BF39 /* EmptyView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyView.xib; sourceTree = "<group>"; };
 		F37686FA23538C0200C6BF39 /* music.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = music.json; sourceTree = "<group>"; };
+		F37687002353A43400C6BF39 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		F39A62F62351489600E28C58 /* Frederic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Frederic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F39A62F92351489600E28C58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F39A63022351489A00E28C58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 			children = (
 				F39A636D2352BAED00E28C58 /* UIImageView+Extension.swift */,
 				F37686EE2353848000C6BF39 /* String+Extension.swift */,
+				F37687002353A43400C6BF39 /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				F39A634423521C2000E28C58 /* Artist.swift in Sources */,
 				F39A635E23528B5A00E28C58 /* ArtistDetailInteractor.swift in Sources */,
 				F39A62FA2351489600E28C58 /* AppDelegate.swift in Sources */,
+				F37687012353A43400C6BF39 /* UIViewController+Extension.swift in Sources */,
 				F39A63272351602500E28C58 /* SearchWorker.swift in Sources */,
 				F39A636E2352BAED00E28C58 /* UIImageView+Extension.swift in Sources */,
 				F39A634D2352332600E28C58 /* FredericError.swift in Sources */,

@@ -6,7 +6,7 @@
 //  Copyright (c) 2019 Carlos Jimenez. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 enum ArtistDetail {
     // MARK: Use cases
@@ -18,6 +18,7 @@ enum ArtistDetail {
             let artist: Artist
         }
         struct ViewModel {
+            let id: Int
             let name: String
         }
     }

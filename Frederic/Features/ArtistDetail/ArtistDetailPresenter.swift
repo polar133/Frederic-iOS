@@ -6,7 +6,7 @@
 //  Copyright (c) 2019 Carlos Jimenez. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 protocol ArtistDetailPresentationLogic {
     func presentArtist(response: ArtistDetail.Profile.Response)
@@ -18,7 +18,7 @@ class ArtistDetailPresenter: ArtistDetailPresentationLogic {
     // MARK: Do something
 
     func presentArtist(response: ArtistDetail.Profile.Response) {
-        let viewModel = ArtistDetail.Profile.ViewModel(name: response.artist.name)
+        let viewModel = ArtistDetail.Profile.ViewModel(id: response.artist.id, name: response.artist.name)
         viewController?.displayArtist(viewModel: viewModel)
     }
 }

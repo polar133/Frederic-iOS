@@ -16,6 +16,7 @@ class ArtistDetailViewController: UIViewController, ArtistDetailDisplayLogic {
     var router: (NSObjectProtocol & ArtistDetailRoutingLogic & ArtistDetailDataPassing)?
 
     // MARK: Object lifecycle
+    @IBOutlet private weak var artistImage: UIImageView!
     @IBOutlet private weak var artistNameLabel: UILabel!
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -50,9 +51,19 @@ class ArtistDetailViewController: UIViewController, ArtistDetailDisplayLogic {
         loadArtist()
     }
 
-    // MARK: Do something
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupNavigationBar()
+    }
 
-    //@IBOutlet weak var nameTextField: UITextField!
+    // MARK: Setups
+    func setupNavigationBar() {
+        configureNavigationBar(largeTitleColor: .white,
+                               backgroundColor: self.view.backgroundColor ?? UIColor.clear,
+                               tintColor: .white,
+                               title: "ARTIST_DETAIL".localized,
+                               preferredLargeTitle: true)
+    }
 
     func loadArtist() {
         let request = ArtistDetail.Profile.Request()
@@ -61,5 +72,9 @@ class ArtistDetailViewController: UIViewController, ArtistDetailDisplayLogic {
 
     func displayArtist(viewModel: ArtistDetail.Profile.ViewModel) {
         artistNameLabel.text = viewModel.name
+        guard let url = FredericAPI.imageURL(id: viewModel.id) else {
+            return
+        }
+        self.artistImage.load(url: url)
     }
 }
