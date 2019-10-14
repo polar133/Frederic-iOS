@@ -1,5 +1,5 @@
 # Frederic for iOS
---
+
 ### Description
 App that search a list of artist and shown his profile once selected. It was built using the View Interactor Presenter (VIP) architecture for iOS.
 
