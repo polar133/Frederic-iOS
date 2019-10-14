@@ -12,12 +12,15 @@ protocol ArtistDetailDisplayLogic: class {
 }
 
 class ArtistDetailViewController: UIViewController, ArtistDetailDisplayLogic {
+
     var interactor: ArtistDetailBusinessLogic?
     var router: (NSObjectProtocol & ArtistDetailRoutingLogic & ArtistDetailDataPassing)?
 
-    // MARK: Object lifecycle
+    // MARK: IBOutlet
     @IBOutlet private weak var artistImage: UIImageView!
     @IBOutlet private weak var artistNameLabel: UILabel!
+
+    // MARK: Object lifecycle
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -65,10 +68,14 @@ class ArtistDetailViewController: UIViewController, ArtistDetailDisplayLogic {
                                preferredLargeTitle: true)
     }
 
+    // MARK: Load artist
+
     func loadArtist() {
         let request = ArtistDetail.Profile.Request()
         interactor?.getArtist(request: request)
     }
+
+    // MARK: ArtistDetailDisplayLogic implementation
 
     func displayArtist(viewModel: ArtistDetail.Profile.ViewModel) {
         artistNameLabel.text = viewModel.name

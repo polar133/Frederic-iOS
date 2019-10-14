@@ -15,7 +15,8 @@ protocol ArtistDetailPresentationLogic {
 class ArtistDetailPresenter: ArtistDetailPresentationLogic {
     weak var viewController: ArtistDetailDisplayLogic?
 
-    // MARK: Do something
+    // MARK: Present artist
+    /// based on response from interactor
 
     func presentArtist(response: ArtistDetail.Profile.Response) {
         let viewModel = ArtistDetail.Profile.ViewModel(id: response.artist.id, name: response.artist.name)

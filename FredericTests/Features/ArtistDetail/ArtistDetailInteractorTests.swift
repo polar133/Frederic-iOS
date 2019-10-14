@@ -41,10 +41,6 @@ class ArtistDetailInteractorTests: XCTestCase {
                         kind: nil)
     }
 
-    // MARK: Test doubles
-
-
-
     // MARK: Tests
 
     func testGetArtist() {

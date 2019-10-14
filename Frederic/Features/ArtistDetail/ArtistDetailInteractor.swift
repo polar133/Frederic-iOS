@@ -20,7 +20,7 @@ class ArtistDetailInteractor: ArtistDetailBusinessLogic, ArtistDetailDataStore {
     var presenter: ArtistDetailPresentationLogic?
     var artist: Artist?
 
-    // MARK: Do something
+    // MARK: Get artist from DataStore
 
     func getArtist(request: ArtistDetail.Profile.Request) {
         guard let artist = self.artist else {

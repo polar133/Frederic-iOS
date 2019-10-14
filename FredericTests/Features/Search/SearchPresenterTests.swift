@@ -82,6 +82,18 @@ class SearchPresenterTests: XCTestCase {
         XCTAssertTrue(spy.displayLoadingCalled)
     }
 
+    func testHideLoading() {
+        // Given
+        let spy = SearchDisplayLogicSpy()
+        sut.viewController = spy
+
+        // When
+        sut.dismissLoading()
+
+        // Then
+        XCTAssertTrue(spy.hideLoadingCalled)
+    }
+
     func testPresentError() {
         // Given
         let spy = SearchDisplayLogicSpy()
