@@ -48,6 +48,7 @@ class SearchInteractorTests: XCTestCase {
         // Then
         XCTAssertTrue(spy.presentLoadingCalled)
         XCTAssertTrue(spy.presentSearchResultCalled)
+        XCTAssertTrue(spy.dismissLoadingCalled)
     }
 
     func testLessWordsInSearch() {
