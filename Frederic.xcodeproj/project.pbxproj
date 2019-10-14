@@ -94,7 +94,7 @@
 		F39A634323521C2000E28C58 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		F39A634623522EAD00E28C58 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		F39A634823522ED900E28C58 /* FredericAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FredericAPI.swift; sourceTree = "<group>"; };
-		F39A634A23522F9400E28C58 /* API.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = API.plist; path = ../API.plist; sourceTree = "<group>"; };
+		F39A634A23522F9400E28C58 /* API.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = API.plist; sourceTree = "<group>"; };
 		F39A634C2352332600E28C58 /* FredericError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FredericError.swift; sourceTree = "<group>"; };
 		F39A634E235250E400E28C58 /* ArtistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCell.swift; sourceTree = "<group>"; };
 		F39A634F235250E400E28C58 /* ArtistCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistCell.xib; sourceTree = "<group>"; };
