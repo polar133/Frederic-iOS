@@ -9,6 +9,7 @@
 import UIKit
 
 extension UIImageView {
+    // MARK: load external images from URL into UIImageView
     func load(url: URL, placeholder: UIImage = #imageLiteral(resourceName: "placeholder")) {
         DispatchQueue.global().async { [weak self] in
             if let data = try? Data(contentsOf: url) {

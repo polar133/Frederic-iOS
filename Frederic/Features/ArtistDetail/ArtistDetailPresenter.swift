@@ -6,7 +6,7 @@
 //  Copyright (c) 2019 Carlos Jimenez. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 protocol ArtistDetailPresentationLogic {
     func presentArtist(response: ArtistDetail.Profile.Response)
