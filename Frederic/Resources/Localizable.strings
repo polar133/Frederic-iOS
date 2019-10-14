@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  Frederic
+
+  Created by Carlos Jimenez on 13-10-19.
+  Copyright © 2019 Carlos Jimenez. All rights reserved.
+*/
+
+//Errors
+INVALID_URL = "Oops! we can't seem to find what you're looking for.";
+INVALID_RESPONSE = "Invalid response 🙃";
+NO_NETWORK = "The network connection is lost.";
+TIME_OUT = "We didn't anticipate this taking so long";
+UNKNOWN = "Oops! Something is broken.";
+RETRY = "Try again";
+NO_RESULTS = "No results found!";
+
+//Features
+SEARCH_NAME = "Frederic";
+SEARCH_BAR = "Search for artists";
+ARTIST_DETAIL = "Artist Profile";
